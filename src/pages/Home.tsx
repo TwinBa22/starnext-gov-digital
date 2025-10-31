@@ -74,7 +74,7 @@ const Home = () => {
 
   const caseStudies = [
     {
-      title: "FSL Computerisation",
+      title: "Track-and-Trace System for TASMAC",
       client: "Maharashtra Government",
       impact: "13 Forensic labs digitized across the state",
       description: "Complete digital transformation with LIMS, evidence management, and reporting systems",
