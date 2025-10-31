@@ -36,13 +36,17 @@ const Navigation = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
-            <img src={logo} alt="StarNext Innovations" className="h-12 w-auto" />
+          <Link to="/" className="flex items-center space-x-3 group">
+            <img 
+              src={logo} 
+              alt="StarNext Innovations" 
+              className="h-14 w-auto transition-transform duration-300 group-hover:scale-105" 
+            />
             <div className="hidden md:block">
-              <span className="text-xl font-bold text-primary">
+              <span className="text-2xl font-bold gradient-text">
                 StarNext
               </span>
-              <span className="text-sm text-secondary block -mt-1">
+              <span className="text-xs font-semibold text-secondary block -mt-1 tracking-wider uppercase">
                 Innovations
               </span>
             </div>
