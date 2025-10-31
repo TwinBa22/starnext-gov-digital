@@ -9,47 +9,51 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 212 100% 18%;
+    --foreground: 291 64% 25%;
     
     /* StarNext Brand Colors */
-    --navy: 212 100% 18%; /* #012A5E */
-    --sky-blue: 203 100% 59%; /* #2EA7FF */
+    --purple: 291 64% 40%; /* #8B4789 */
+    --gold: 42 47% 59%; /* #C9A961 */
+    --purple-dark: 291 64% 25%; /* Darker shade */
+    --purple-light: 291 50% 70%; /* Lighter shade */
     
     --card: 0 0% 100%;
-    --card-foreground: 212 100% 18%;
+    --card-foreground: 291 64% 25%;
     
     --popover: 0 0% 100%;
-    --popover-foreground: 212 100% 18%;
+    --popover-foreground: 291 64% 25%;
     
-    --primary: 212 100% 18%;
+    --primary: 291 64% 40%;
     --primary-foreground: 0 0% 100%;
     
-    --secondary: 203 100% 59%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 42 47% 59%;
+    --secondary-foreground: 291 64% 25%;
     
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 291 20% 96%;
+    --muted-foreground: 291 15% 45%;
     
-    --accent: 203 100% 59%;
+    --accent: 291 64% 40%;
     --accent-foreground: 0 0% 100%;
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 212 100% 18%;
+    --border: 291 20% 90%;
+    --input: 291 20% 90%;
+    --ring: 291 64% 40%;
     
     --radius: 0.75rem;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(212 100% 18%), hsl(203 100% 59%));
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 40% 98%));
+    --gradient-hero: linear-gradient(135deg, hsl(291 64% 40%), hsl(42 47% 59%));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(291 20% 98%));
+    --gradient-purple: linear-gradient(135deg, hsl(291 64% 40%), hsl(291 50% 70%));
     
     /* Shadows */
-    --shadow-soft: 0 2px 8px hsl(212 100% 18% / 0.08);
-    --shadow-medium: 0 4px 16px hsl(212 100% 18% / 0.12);
-    --shadow-strong: 0 8px 32px hsl(212 100% 18% / 0.16);
+    --shadow-soft: 0 2px 8px hsl(291 64% 40% / 0.08);
+    --shadow-medium: 0 4px 16px hsl(291 64% 40% / 0.12);
+    --shadow-strong: 0 8px 32px hsl(291 64% 40% / 0.16);
+    --shadow-glow: 0 0 40px hsl(291 64% 40% / 0.3);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -82,18 +86,26 @@ All colors MUST be HSL.
   }
   
   .gradient-text {
-    @apply bg-gradient-to-r from-[hsl(212,100%,18%)] to-[hsl(203,100%,59%)] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
   }
   
   .btn-primary {
-    @apply bg-[hsl(212,100%,18%)] text-white hover:bg-[hsl(212,100%,25%)] transition-all duration-300 shadow-lg hover:shadow-xl;
+    @apply bg-primary text-primary-foreground hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl;
   }
   
   .btn-secondary {
-    @apply bg-[hsl(203,100%,59%)] text-white hover:bg-[hsl(203,100%,65%)] transition-all duration-300 shadow-lg hover:shadow-xl;
+    @apply bg-secondary text-secondary-foreground hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl;
   }
   
   .card-hover {
     @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+  
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  .card-gradient {
+    background: var(--gradient-card);
   }
 }

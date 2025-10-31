@@ -15,6 +15,12 @@ import {
   Building2,
 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import datacenterImg from "@/assets/datacenter.jpg";
+import cloudImg from "@/assets/cloud-solutions.jpg";
+import softwareImg from "@/assets/software-dev.jpg";
+import cybersecurityImg from "@/assets/cybersecurity.jpg";
+import govBuildingImg from "@/assets/government-building.jpg";
+import teamImg from "@/assets/team-collaboration.jpg";
 
 const Home = () => {
   const stats = [
@@ -89,14 +95,18 @@ const Home = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section
-        className="relative h-[600px] md:h-[700px] flex items-center justify-center text-white"
-        style={{
-          backgroundImage: `linear-gradient(135deg, rgba(1, 42, 94, 0.9), rgba(46, 167, 255, 0.8)), url(${heroBg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+        className="relative h-[600px] md:h-[700px] flex items-center justify-center text-white overflow-hidden"
       >
-        <div className="container-custom text-center space-y-6 px-4 animate-fade-in">
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `url(${heroBg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+        <div className="absolute inset-0 hero-gradient opacity-90 z-10" />
+        <div className="relative z-20 container-custom text-center space-y-6 px-4 animate-fade-in">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
             Powering Government Digital Transformation
           </h1>
@@ -105,12 +115,12 @@ const Home = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
             <Link to="/services">
-              <Button size="lg" className="bg-white text-[hsl(212,100%,18%)] hover:bg-white/90 text-lg px-8">
+              <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8">
                 Explore Services
               </Button>
             </Link>
             <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-[hsl(212,100%,18%)] text-lg px-8">
+              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary text-lg px-8">
                 Contact Us
               </Button>
             </Link>
@@ -148,15 +158,24 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {capabilities.map((capability, index) => (
-              <Card key={index} className="card-hover border-0 shadow-md animate-scale-in" style={{ animationDelay: `${index * 0.1}s` }}>
-                <CardContent className="p-6">
-                  <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-[hsl(212,100%,18%)] to-[hsl(203,100%,59%)] flex items-center justify-center mb-4">
-                    <capability.icon className="text-white" size={28} />
+              <Card key={index} className="card-hover border-0 shadow-md animate-scale-in overflow-hidden" style={{ animationDelay: `${index * 0.1}s` }}>
+                <CardContent className="p-0">
+                  <div className="h-48 overflow-hidden">
+                    <img 
+                      src={index === 0 ? datacenterImg : index === 1 ? cloudImg : index === 2 ? softwareImg : index === 3 ? cybersecurityImg : index === 4 ? datacenterImg : softwareImg} 
+                      alt={capability.title}
+                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                    />
                   </div>
-                  <h3 className="text-xl font-semibold mb-2 text-[hsl(212,100%,18%)]">
-                    {capability.title}
-                  </h3>
-                  <p className="text-gray-600">{capability.description}</p>
+                  <div className="p-6">
+                    <div className="w-14 h-14 rounded-lg hero-gradient flex items-center justify-center mb-4 -mt-14 relative shadow-lg">
+                      <capability.icon className="text-white" size={28} />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2 text-primary">
+                      {capability.title}
+                    </h3>
+                    <p className="text-muted-foreground">{capability.description}</p>
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -186,10 +205,12 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {clients.map((client, index) => (
-              <Card key={index} className="border-2 border-gray-200 hover:border-[hsl(203,100%,59%)] transition-all duration-300 animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+              <Card key={index} className="border-2 border-border hover:border-secondary transition-all duration-300 animate-fade-in group" style={{ animationDelay: `${index * 0.1}s` }}>
                 <CardContent className="p-6 flex items-center space-x-4">
-                  <Building2 className="text-[hsl(203,100%,59%)] flex-shrink-0" size={32} />
-                  <span className="font-medium text-[hsl(212,100%,18%)]">{client}</span>
+                  <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center group-hover:bg-secondary/10 transition-colors">
+                    <Building2 className="text-secondary flex-shrink-0" size={32} />
+                  </div>
+                  <span className="font-medium text-primary">{client}</span>
                 </CardContent>
               </Card>
             ))}
@@ -211,21 +232,26 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
-              <Card key={index} className="card-hover shadow-lg animate-scale-in" style={{ animationDelay: `${index * 0.1}s` }}>
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-2 mb-4">
-                    <Award className="text-[hsl(203,100%,59%)]" size={24} />
-                    <span className="text-sm font-semibold text-[hsl(203,100%,59%)]">
-                      {study.client}
-                    </span>
+              <Card key={index} className="card-hover shadow-lg animate-scale-in overflow-hidden" style={{ animationDelay: `${index * 0.1}s` }}>
+                <CardContent className="p-0">
+                  <div className="h-48 overflow-hidden bg-gradient-to-br from-primary to-secondary/50 flex items-center justify-center">
+                    <Award className="text-white" size={64} />
                   </div>
-                  <h3 className="text-xl font-bold mb-2 text-[hsl(212,100%,18%)]">
-                    {study.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4">{study.description}</p>
-                  <div className="flex items-center space-x-2 text-sm font-semibold text-[hsl(212,100%,18%)]">
-                    <TrendingUp size={18} className="text-[hsl(203,100%,59%)]" />
-                    <span>{study.impact}</span>
+                  <div className="p-6">
+                    <div className="flex items-center space-x-2 mb-4">
+                      <Award className="text-secondary" size={24} />
+                      <span className="text-sm font-semibold text-secondary">
+                        {study.client}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-bold mb-2 text-primary">
+                      {study.title}
+                    </h3>
+                    <p className="text-muted-foreground mb-4">{study.description}</p>
+                    <div className="flex items-center space-x-2 text-sm font-semibold text-primary">
+                      <TrendingUp size={18} className="text-secondary" />
+                      <span>{study.impact}</span>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -243,8 +269,17 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-br from-[hsl(212,100%,18%)] to-[hsl(203,100%,59%)] text-white">
-        <div className="container-custom text-center">
+      <section className="relative section-padding text-white overflow-hidden">
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `url(${teamImg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+        <div className="absolute inset-0 hero-gradient opacity-95 z-10" />
+        <div className="relative z-20 container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Transform Your Digital Infrastructure?
           </h2>
@@ -252,7 +287,7 @@ const Home = () => {
             Partner with us for secure, scalable, and innovative technology solutions
           </p>
           <Link to="/contact">
-            <Button size="lg" className="bg-white text-[hsl(212,100%,18%)] hover:bg-white/90 text-lg px-8">
+            <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 shadow-lg hover:shadow-xl transition-all">
               Get Started Today
             </Button>
           </Link>
