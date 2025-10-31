@@ -120,7 +120,7 @@ const Home = () => {
               </Button>
             </Link>
             <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-navy-dark bg-white/10 backdrop-blur-sm text-lg px-8">
+              <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8">
                 Contact Us
               </Button>
             </Link>
