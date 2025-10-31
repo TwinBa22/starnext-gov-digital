@@ -74,10 +74,10 @@ const Home = () => {
 
   const caseStudies = [
     {
-      title: "Track-and-Trace System for TASMAC",
+      title: "FSL Computerisation",
       client: "Maharashtra Government",
       impact: "13 Forensic labs digitized across the state",
-      description: "Enabling Real-Time Monitoring of Liquor Movement from Manufacturing to Retail Using Barcode",
+      description: "Complete digital transformation with LIMS, evidence management, and reporting systems",
     },
     {
       title: "MahaTribes Portal",
@@ -86,10 +86,10 @@ const Home = () => {
       description: "End-to-end digital platform for tribal welfare and certificate services",
     },
     {
-      title: "TASMAC Infrastructure",
+      title: "Track-and-Trace System for TASMAC",
       client: "Tamil Nadu Government",
       impact: "State-wide deployment",
-      description: "IT infrastructure and surveillance systems for government retail operations",
+      description: "Enabling Real-Time Monitoring of Liquor Movement from Manufacturing to Retail Using Barcode",
     },
   ];
 
