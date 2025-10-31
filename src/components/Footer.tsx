@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="space-y-4">
-            <img src={logo} alt="StarNext Innovations" className="h-16 w-auto mb-4 brightness-0 invert" />
+            <img src={logo} alt="StarNext Innovations" className="h-16 w-auto mb-4" />
             <p className="text-sm text-white/70">
               Powering Government Digital Transformation with Secure & Scalable Technology
             </p>
