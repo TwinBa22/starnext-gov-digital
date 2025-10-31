@@ -36,13 +36,8 @@ const Navigation = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
-            <img 
-              src={logo} 
-              alt="StarNext Innovations" 
-              className="h-14 w-auto transition-transform duration-300 group-hover:scale-105" 
-            />
-            <div className="hidden md:block">
+          <Link to="/" className="flex items-center group">
+            <div>
               <span className="text-2xl font-bold gradient-text">
                 StarNext
               </span>
