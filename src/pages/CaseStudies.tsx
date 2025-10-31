@@ -117,40 +117,6 @@ const CaseStudies = () => {
         { label: "Districts Covered", value: "36" },
       ],
     },
-    {
-      id: "tasmac",
-      title: "TASMAC Infrastructure Modernization",
-      client: "Tamil Nadu Government",
-      location: "State-wide deployment",
-      duration: "2019 - 2021",
-      category: "Infrastructure & Security",
-      icon: Network,
-      problem:
-        "TASMAC retail operations required modern IT infrastructure, surveillance systems, and inventory management across multiple locations. Existing infrastructure was outdated and lacked centralized monitoring.",
-      solution:
-        "Deployed comprehensive IT and surveillance infrastructure including CCTV systems, access control, network backbone, inventory management software, and centralized monitoring center. Implemented real-time analytics and reporting dashboards.",
-      technologies: [
-        "IP-based CCTV Surveillance",
-        "Access Control Systems",
-        "Inventory Management System",
-        "Centralized Monitoring",
-        "Network Security",
-        "Power Backup (UPS/DG)",
-      ],
-      impact: [
-        "500+ locations equipped with modern infrastructure",
-        "24/7 real-time monitoring",
-        "Reduced inventory discrepancies by 40%",
-        "Enhanced security and compliance",
-        "Improved operational efficiency",
-      ],
-      metrics: [
-        { label: "Locations Deployed", value: "500+" },
-        { label: "CCTV Cameras", value: "2000+" },
-        { label: "Uptime", value: "99.8%" },
-        { label: "Efficiency Gain", value: "40%" },
-      ],
-    },
   ];
 
   return (
