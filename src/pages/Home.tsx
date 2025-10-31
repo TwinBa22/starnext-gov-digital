@@ -16,9 +16,11 @@ import {
 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import datacenterImg from "@/assets/datacenter.jpg";
-import cloudImg from "@/assets/cloud-solutions.jpg";
-import softwareImg from "@/assets/software-dev.jpg";
+import cloudImg from "@/assets/cloud-solutions-new.jpg";
+import softwareImg from "@/assets/software-dev-new.jpg";
 import cybersecurityImg from "@/assets/cybersecurity.jpg";
+import infrastructureImg from "@/assets/infrastructure-new.jpg";
+import digitizationImg from "@/assets/digitization-new.jpg";
 import govBuildingImg from "@/assets/government-building.jpg";
 import teamImg from "@/assets/team-collaboration.jpg";
 
@@ -39,12 +41,12 @@ const Home = () => {
     {
       icon: Cloud,
       title: "Cloud Solutions",
-      description: "Hybrid Cloud deployments on AWS, Azure, and NIC Cloud infrastructure",
+      description: "End-to-End Cloud Engineering — From Architecture Design to Deployment",
     },
     {
       icon: Code,
       title: "Software Development",
-      description: "Custom HRMS, DMS, VMS, and Mobile Apps for government operations",
+      description: "Enterprise-Grade Application Development and System Integration",
     },
     {
       icon: Shield,
@@ -54,7 +56,7 @@ const Home = () => {
     {
       icon: Network,
       title: "Infrastructure",
-      description: "Multi-location IT/Non-IT infrastructure with CCTV and access control",
+      description: "Designing and Implementing Multi-Location IT & Non-IT Infrastructure — Including Networking, CCTV Surveillance, Access Control, and Data Centre Ecosystems",
     },
     {
       icon: FileText,
@@ -145,7 +147,7 @@ const Home = () => {
                 <CardContent className="p-0">
                   <div className="h-48 overflow-hidden">
                     <img 
-                      src={index === 0 ? datacenterImg : index === 1 ? cloudImg : index === 2 ? softwareImg : index === 3 ? cybersecurityImg : index === 4 ? datacenterImg : softwareImg} 
+                      src={index === 0 ? datacenterImg : index === 1 ? cloudImg : index === 2 ? softwareImg : index === 3 ? cybersecurityImg : index === 4 ? infrastructureImg : digitizationImg} 
                       alt={capability.title}
                       className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                     />
