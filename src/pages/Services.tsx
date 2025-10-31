@@ -13,8 +13,21 @@ import {
   BarChart3,
   GraduationCap,
 } from "lucide-react";
+import servicesInfraImage from "@/assets/services-infrastructure.jpg";
+import datacenterImage from "@/assets/datacenter.jpg";
+import softwareDevImage from "@/assets/software-dev.jpg";
+import cybersecurityImage from "@/assets/cybersecurity.jpg";
 
 const Services = () => {
+  const serviceImages: Record<string, string> = {
+    "data-centre": datacenterImage,
+    "software": softwareDevImage,
+    "cybersecurity": cybersecurityImage,
+    "infrastructure": servicesInfraImage,
+    "digitization": softwareDevImage,
+    "training": datacenterImage,
+  };
+
   const services = [
     {
       id: "data-centre",
@@ -111,8 +124,12 @@ const Services = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-br from-[hsl(212,100%,18%)] to-[hsl(203,100%,59%)] text-white">
-        <div className="container-custom text-center animate-fade-in">
+      <section className="section-padding hero-gradient text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+        </div>
+        <div className="container-custom text-center animate-fade-in relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
           <p className="text-xl max-w-3xl mx-auto text-white/90">
             Comprehensive technology solutions for government digital transformation and enterprise excellence
@@ -125,13 +142,24 @@ const Services = () => {
         <div className="container-custom">
           <div className="text-sm text-gray-600">
             <span>Home</span> <span className="mx-2">/</span>
-            <span className="text-[hsl(212,100%,18%)] font-semibold">Services</span>
+            <span className="text-primary font-semibold">Services</span>
           </div>
         </div>
       </section>
 
-      {/* Services Grid */}
+      {/* Services Image Section */}
       <section className="section-padding bg-white">
+        <div className="container-custom">
+          <img 
+            src={servicesInfraImage} 
+            alt="Modern IT infrastructure and data center"
+            className="rounded-2xl shadow-2xl w-full h-auto object-cover max-h-[500px] animate-fade-in"
+          />
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="space-y-24">
             {services.map((service, index) => (
@@ -147,14 +175,21 @@ const Services = () => {
                     index % 2 === 1 ? "lg:order-2" : ""
                   }`}
                 >
-                  <div className="flex items-center space-x-4 mb-6">
-                    <div className="w-20 h-20 rounded-xl bg-gradient-to-br from-[hsl(212,100%,18%)] to-[hsl(203,100%,59%)] flex items-center justify-center shadow-lg">
+                  <div className="mb-6">
+                    <img 
+                      src={serviceImages[service.id]}
+                      alt={service.title}
+                      className="rounded-xl shadow-lg w-full h-64 object-cover mb-6"
+                    />
+                    <div className="flex items-center space-x-4">
+                      <div className="w-20 h-20 rounded-xl hero-gradient flex items-center justify-center shadow-lg">
                       <service.icon className="text-white" size={40} />
                     </div>
-                    <div>
-                      <h2 className="text-3xl font-bold text-[hsl(212,100%,18%)]">
-                        {service.title}
-                      </h2>
+                      <div>
+                        <h2 className="text-3xl font-bold text-primary">
+                          {service.title}
+                        </h2>
+                      </div>
                     </div>
                   </div>
                   <p className="text-lg text-gray-700 mb-8 leading-relaxed">
@@ -170,14 +205,14 @@ const Services = () => {
                   style={{ animationDelay: "0.2s" }}
                 >
                   <CardContent className="p-8">
-                    <h3 className="text-xl font-bold text-[hsl(212,100%,18%)] mb-6">
+                    <h3 className="text-xl font-bold text-primary mb-6">
                       Key Features
                     </h3>
                     <ul className="space-y-4">
                       {service.features.map((feature, idx) => (
                         <li key={idx} className="flex items-start space-x-3">
-                          <div className="w-6 h-6 rounded-full bg-[hsl(203,100%,59%)]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <div className="w-2 h-2 rounded-full bg-[hsl(203,100%,59%)]"></div>
+                          <div className="w-6 h-6 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <div className="w-2 h-2 rounded-full bg-secondary"></div>
                           </div>
                           <span className="text-gray-700">{feature}</span>
                         </li>
@@ -220,8 +255,8 @@ const Services = () => {
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
                 <CardContent className="p-6">
-                  <tech.icon className="mx-auto mb-3 text-[hsl(203,100%,59%)]" size={40} />
-                  <p className="font-semibold text-[hsl(212,100%,18%)]">{tech.name}</p>
+                  <tech.icon className="mx-auto mb-3 text-secondary" size={40} />
+                  <p className="font-semibold text-primary">{tech.name}</p>
                 </CardContent>
               </Card>
             ))}
@@ -230,8 +265,11 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-br from-[hsl(212,100%,18%)] to-[hsl(203,100%,59%)] text-white">
-        <div className="container-custom text-center">
+      <section className="section-padding hero-gradient text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+        </div>
+        <div className="container-custom text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Get Started?
           </h2>
@@ -239,7 +277,7 @@ const Services = () => {
             Contact us to discuss your project requirements and discover how we can help transform your digital infrastructure
           </p>
           <a href="/contact">
-            <button className="bg-white text-[hsl(212,100%,18%)] hover:bg-white/90 px-8 py-4 rounded-lg font-semibold text-lg shadow-xl transition-all duration-300 hover:shadow-2xl">
+            <button className="bg-white text-primary hover:bg-white/90 px-8 py-4 rounded-lg font-semibold text-lg shadow-xl transition-all duration-300 hover:shadow-2xl">
               Contact Our Team
             </button>
           </a>

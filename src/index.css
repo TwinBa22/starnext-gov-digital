@@ -11,11 +11,11 @@ All colors MUST be HSL.
     --background: 0 0% 100%;
     --foreground: 291 64% 25%;
     
-    /* StarNext Brand Colors */
-    --purple: 291 64% 40%; /* #8B4789 */
+    /* StarNext Brand Colors - Toned Down */
+    --purple: 291 50% 35%; /* Darker, more muted purple */
     --gold: 42 47% 59%; /* #C9A961 */
-    --purple-dark: 291 64% 25%; /* Darker shade */
-    --purple-light: 291 50% 70%; /* Lighter shade */
+    --purple-dark: 291 50% 20%; /* Darker shade */
+    --purple-light: 291 40% 60%; /* Lighter shade */
     
     --card: 0 0% 100%;
     --card-foreground: 291 64% 25%;
@@ -23,16 +23,16 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 291 64% 25%;
     
-    --primary: 291 64% 40%;
+    --primary: 291 50% 35%;
     --primary-foreground: 0 0% 100%;
     
     --secondary: 42 47% 59%;
-    --secondary-foreground: 291 64% 25%;
+    --secondary-foreground: 291 50% 20%;
     
     --muted: 291 20% 96%;
     --muted-foreground: 291 15% 45%;
     
-    --accent: 291 64% 40%;
+    --accent: 291 50% 35%;
     --accent-foreground: 0 0% 100%;
     
     --destructive: 0 84% 60%;
@@ -40,20 +40,20 @@ All colors MUST be HSL.
     
     --border: 291 20% 90%;
     --input: 291 20% 90%;
-    --ring: 291 64% 40%;
+    --ring: 291 50% 35%;
     
     --radius: 0.75rem;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(291 64% 40%), hsl(42 47% 59%));
+    --gradient-hero: linear-gradient(135deg, hsl(291 50% 35%), hsl(42 47% 59%));
     --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(291 20% 98%));
-    --gradient-purple: linear-gradient(135deg, hsl(291 64% 40%), hsl(291 50% 70%));
+    --gradient-purple: linear-gradient(135deg, hsl(291 50% 35%), hsl(291 40% 60%));
     
     /* Shadows */
-    --shadow-soft: 0 2px 8px hsl(291 64% 40% / 0.08);
-    --shadow-medium: 0 4px 16px hsl(291 64% 40% / 0.12);
-    --shadow-strong: 0 8px 32px hsl(291 64% 40% / 0.16);
-    --shadow-glow: 0 0 40px hsl(291 64% 40% / 0.3);
+    --shadow-soft: 0 2px 8px hsl(291 50% 35% / 0.08);
+    --shadow-medium: 0 4px 16px hsl(291 50% 35% / 0.12);
+    --shadow-strong: 0 8px 32px hsl(291 50% 35% / 0.16);
+    --shadow-glow: 0 0 40px hsl(291 50% 35% / 0.3);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

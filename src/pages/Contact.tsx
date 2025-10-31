@@ -14,6 +14,7 @@ import {
   Building2,
   Clock,
 } from "lucide-react";
+import contactOfficeImage from "@/assets/contact-office.jpg";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -83,8 +84,12 @@ const Contact = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-br from-[hsl(212,100%,18%)] to-[hsl(203,100%,59%)] text-white">
-        <div className="container-custom text-center animate-fade-in">
+      <section className="section-padding hero-gradient text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+        </div>
+        <div className="container-custom text-center animate-fade-in relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
           <p className="text-xl max-w-3xl mx-auto text-white/90">
             Get in touch with our team to discuss your digital transformation needs
@@ -97,13 +102,24 @@ const Contact = () => {
         <div className="container-custom">
           <div className="text-sm text-gray-600">
             <span>Home</span> <span className="mx-2">/</span>
-            <span className="text-[hsl(212,100%,18%)] font-semibold">Contact</span>
+            <span className="text-primary font-semibold">Contact</span>
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Office Image */}
       <section className="section-padding bg-white">
+        <div className="container-custom">
+          <img 
+            src={contactOfficeImage} 
+            alt="StarNext Innovations office building"
+            className="rounded-2xl shadow-2xl w-full h-auto object-cover max-h-[400px] animate-fade-in"
+          />
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
@@ -214,11 +230,11 @@ const Contact = () => {
               <Card className="shadow-lg card-hover">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[hsl(212,100%,18%)] to-[hsl(203,100%,59%)] flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 rounded-lg hero-gradient flex items-center justify-center flex-shrink-0">
                       <MapPin className="text-white" size={24} />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-[hsl(212,100%,18%)] mb-2">
+                      <h3 className="font-semibold text-primary mb-2">
                         Office Address
                       </h3>
                       <p className="text-gray-600 leading-relaxed">
@@ -235,16 +251,16 @@ const Contact = () => {
               <Card className="shadow-lg card-hover">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[hsl(212,100%,18%)] to-[hsl(203,100%,59%)] flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 rounded-lg hero-gradient flex items-center justify-center flex-shrink-0">
                       <Phone className="text-white" size={24} />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-[hsl(212,100%,18%)] mb-2">
+                      <h3 className="font-semibold text-primary mb-2">
                         Phone
                       </h3>
                       <a
                         href="tel:+918308843553"
-                        className="text-[hsl(203,100%,59%)] hover:underline"
+                        className="text-secondary hover:underline"
                       >
                         +91 8308843553
                       </a>
@@ -256,16 +272,16 @@ const Contact = () => {
               <Card className="shadow-lg card-hover">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[hsl(212,100%,18%)] to-[hsl(203,100%,59%)] flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 rounded-lg hero-gradient flex items-center justify-center flex-shrink-0">
                       <Mail className="text-white" size={24} />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-[hsl(212,100%,18%)] mb-2">
+                      <h3 className="font-semibold text-primary mb-2">
                         Email
                       </h3>
                       <a
                         href="mailto:tanmay.halaye@starnextinnovations.com"
-                        className="text-[hsl(203,100%,59%)] hover:underline break-all"
+                        className="text-secondary hover:underline break-all"
                       >
                         tanmay.halaye@starnextinnovations.com
                       </a>
@@ -277,11 +293,11 @@ const Contact = () => {
               <Card className="shadow-lg card-hover">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[hsl(212,100%,18%)] to-[hsl(203,100%,59%)] flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 rounded-lg hero-gradient flex items-center justify-center flex-shrink-0">
                       <Clock className="text-white" size={24} />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-[hsl(212,100%,18%)] mb-2">
+                      <h3 className="font-semibold text-primary mb-2">
                         Business Hours
                       </h3>
                       <p className="text-gray-600">
@@ -294,7 +310,7 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              <Card className="shadow-lg bg-gradient-to-br from-[hsl(212,100%,18%)] to-[hsl(203,100%,59%)] text-white">
+              <Card className="shadow-lg hero-gradient text-white">
                 <CardContent className="p-6">
                   <h3 className="font-semibold mb-4 text-lg">Connect With Us</h3>
                   <div className="flex space-x-4">
@@ -322,7 +338,7 @@ const Contact = () => {
       <section className="h-96 bg-gray-200">
         <div className="w-full h-full flex items-center justify-center">
           <div className="text-center">
-            <MapPin size={48} className="mx-auto mb-4 text-[hsl(203,100%,59%)]" />
+            <MapPin size={48} className="mx-auto mb-4 text-secondary" />
             <p className="text-gray-600">Map Integration Placeholder</p>
             <p className="text-sm text-gray-500 mt-2">
               Senapati Bapat Road, Pune – 411016
