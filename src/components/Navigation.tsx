@@ -36,7 +36,7 @@ const Navigation = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center group">
+          <Link to="/" className="flex items-center group ml-4">
             <div>
               <span className="text-2xl font-bold gradient-text">
                 StarNext
