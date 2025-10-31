@@ -1,0 +1,108 @@
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+const Navigation = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navLinks = [
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/about" },
+    { name: "Services", path: "/services" },
+    { name: "Case Studies", path: "/case-studies" },
+    { name: "Contact", path: "/contact" },
+  ];
+
+  return (
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-white shadow-lg"
+          : "bg-white/95 backdrop-blur-sm"
+      }`}
+    >
+      <div className="container-custom">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-3">
+            <div className="w-10 h-10 bg-gradient-to-br from-[hsl(212,100%,18%)] to-[hsl(203,100%,59%)] rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-xl">SN</span>
+            </div>
+            <div className="hidden md:block">
+              <span className="text-xl font-bold text-[hsl(212,100%,18%)]">
+                StarNext
+              </span>
+              <span className="text-sm text-[hsl(203,100%,59%)] block -mt-1">
+                Innovations
+              </span>
+            </div>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`text-sm font-medium transition-colors duration-200 ${
+                  location.pathname === link.path
+                    ? "text-[hsl(203,100%,59%)]"
+                    : "text-[hsl(212,100%,18%)] hover:text-[hsl(203,100%,59%)]"
+                }`}
+              >
+                {link.name}
+              </Link>
+            ))}
+            <Link to="/contact">
+              <Button className="btn-primary">Get Started</Button>
+            </Link>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden text-[hsl(212,100%,18%)]"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden py-4 animate-fade-in">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`block py-3 text-sm font-medium ${
+                  location.pathname === link.path
+                    ? "text-[hsl(203,100%,59%)]"
+                    : "text-[hsl(212,100%,18%)]"
+                }`}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {link.name}
+              </Link>
+            ))}
+            <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
+              <Button className="btn-primary w-full mt-4">Get Started</Button>
+            </Link>
+          </div>
+        )}
+      </div>
+    </nav>
+  );
+};
+
+export default Navigation;
