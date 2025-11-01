@@ -20,7 +20,7 @@ const CaseStudies = () => {
       title: "Computerisation of Forensic Science Laboratories (FSL)",
       client: "Maharashtra Government",
       location: "13 Locations across Maharashtra",
-      duration: "2024-2025",
+      duration: "2022-2023",
       category: "Digital Transformation",
       icon: Building2,
       problem:
@@ -54,7 +54,7 @@ const CaseStudies = () => {
       title: "MahaTribes & Maha-Aadim Portal",
       client: "Tribal Department, Maharashtra",
       location: "State-wide deployment",
-      duration: "2024-2025",
+      duration: "2022-2023",
       category: "Citizen Services",
       icon: Users,
       problem:
@@ -88,7 +88,7 @@ const CaseStudies = () => {
       title: "Caste Certificate Verification System",
       client: "Social Justice Department, Maharashtra",
       location: "District-wide implementation",
-      duration: "2024-2025",
+      duration: "2022-2023",
       category: "Government Process Automation",
       icon: CheckCircle2,
       problem:
