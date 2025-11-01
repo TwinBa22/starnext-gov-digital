@@ -153,7 +153,7 @@ const Home = () => {
                     />
                   </div>
                   <div className="p-6">
-                    <div className="w-14 h-14 rounded-lg hero-gradient flex items-center justify-center mb-4 -mt-14 relative shadow-lg">
+                    <div className="w-14 h-14 rounded-lg hero-gradient opacity-80 flex items-center justify-center mb-4 -mt-14 relative shadow-lg">
                       <capability.icon className="text-white" size={28} />
                     </div>
                     <h3 className="text-xl font-semibold mb-2 text-primary">
