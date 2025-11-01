@@ -319,18 +319,6 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Map Section (Placeholder) */}
-      <section className="h-96 bg-gray-200">
-        <div className="w-full h-full flex items-center justify-center">
-          <div className="text-center">
-            <MapPin size={48} className="mx-auto mb-4 text-secondary" />
-            <p className="text-gray-600">Map Integration Placeholder</p>
-            <p className="text-sm text-gray-500 mt-2">
-              Senapati Bapat Road, Pune – 411016
-            </p>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
