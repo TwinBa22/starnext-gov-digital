@@ -149,7 +149,7 @@ const CaseStudies = () => {
       {caseStudies.map((study, index) => (
         <section
           key={study.id}
-          className={`section-padding ${
+          className={`py-12 md:py-16 ${
             index % 2 === 0 ? "bg-white" : "bg-gray-50"
           }`}
         >

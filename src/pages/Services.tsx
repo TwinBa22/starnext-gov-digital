@@ -150,7 +150,7 @@ const Services = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="section-padding bg-gray-50">
+      <section className="py-12 md:py-16 bg-gray-50">
         <div className="container-custom">
           <div className="space-y-24">
             {services.map((service, index) => (

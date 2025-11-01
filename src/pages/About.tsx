@@ -105,7 +105,7 @@ const About = () => {
       </section>
 
       {/* Company Overview */}
-      <section className="section-padding bg-white">
+      <section className="py-12 md:py-16 bg-white">
         <div className="container-custom">
           <div className="max-w-5xl mx-auto">
             <div className="animate-fade-in text-center mb-12">
