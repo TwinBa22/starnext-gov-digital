@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Linkedin, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
 import logo from "@/assets/starnext-logo.png";
 
 const Footer = () => {
@@ -67,22 +67,24 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Phone size={18} className="flex-shrink-0 text-secondary" />
-                <a href="tel:+918308843553" className="text-sm text-white/70 hover:text-secondary transition-colors">
-                  +91 8308843553
+                <a href="tel:+919146189837" className="text-sm text-white/70 hover:text-secondary transition-colors">
+                  +91 9146189837
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail size={18} className="flex-shrink-0 text-secondary" />
-                <a href="mailto:tanmay.halaye@starnextinnovations.com" className="text-sm text-white/70 hover:text-secondary transition-colors">
-                  tanmay.halaye@starnextinnovations.com
+                <a href="mailto:pavan.hasabnis@starnextinnovations.com" className="text-sm text-white/70 hover:text-secondary transition-colors">
+                  pavan.hasabnis@starnextinnovations.com
                 </a>
               </div>
               <div className="flex space-x-4 mt-4">
-                <a href="#" className="text-white/70 hover:text-secondary transition-colors">
+                <a 
+                  href="https://www.linkedin.com/company/starnext-innovations-pvt-ltd/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/70 hover:text-secondary transition-colors"
+                >
                   <Linkedin size={20} />
-                </a>
-                <a href="#" className="text-white/70 hover:text-secondary transition-colors">
-                  <Twitter size={20} />
                 </a>
               </div>
             </div>

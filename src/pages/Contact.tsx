@@ -9,12 +9,11 @@ import {
   Phone,
   MapPin,
   Linkedin,
-  Twitter,
   Send,
   Building2,
   Clock,
 } from "lucide-react";
-import contactOfficeImage from "@/assets/contact-office.jpg";
+
 
 const Contact = () => {
   const { toast } = useToast();
@@ -107,16 +106,6 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Office Image */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <img 
-            src={contactOfficeImage} 
-            alt="StarNext Innovations office building"
-            className="rounded-2xl shadow-2xl w-full h-auto object-cover max-h-[400px] animate-fade-in"
-          />
-        </div>
-      </section>
 
       {/* Contact Section */}
       <section className="section-padding bg-gray-50">
@@ -259,10 +248,10 @@ const Contact = () => {
                         Phone
                       </h3>
                       <a
-                        href="tel:+918308843553"
+                        href="tel:+919146189837"
                         className="text-secondary hover:underline"
                       >
-                        +91 8308843553
+                        +91 9146189837
                       </a>
                     </div>
                   </div>
@@ -280,10 +269,10 @@ const Contact = () => {
                         Email
                       </h3>
                       <a
-                        href="mailto:tanmay.halaye@starnextinnovations.com"
+                        href="mailto:pavan.hasabnis@starnextinnovations.com"
                         className="text-secondary hover:underline break-all"
                       >
-                        tanmay.halaye@starnextinnovations.com
+                        pavan.hasabnis@starnextinnovations.com
                       </a>
                     </div>
                   </div>
@@ -315,16 +304,12 @@ const Contact = () => {
                   <h3 className="font-semibold mb-4 text-lg">Connect With Us</h3>
                   <div className="flex space-x-4">
                     <a
-                      href="#"
+                      href="https://www.linkedin.com/company/starnext-innovations-pvt-ltd/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="w-12 h-12 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center transition-all duration-300"
                     >
                       <Linkedin size={24} />
-                    </a>
-                    <a
-                      href="#"
-                      className="w-12 h-12 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center transition-all duration-300"
-                    >
-                      <Twitter size={24} />
                     </a>
                   </div>
                 </CardContent>
