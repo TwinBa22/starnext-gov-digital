@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
+import logo from "@/assets/starnext-logo.png";
 
 const Footer = () => {
   return (
@@ -8,16 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="space-y-4">
-            <Link to="/" className="inline-block mb-4">
-              <div>
-                <span className="text-2xl font-bold text-white">
-                  StarNext
-                </span>
-                <span className="text-xs font-semibold text-secondary block -mt-1 tracking-wider uppercase">
-                  Innovations
-                </span>
-              </div>
-            </Link>
+            <img src={logo} alt="StarNext Innovations" className="h-16 w-auto mb-4" />
             <p className="text-sm text-white/70">
               Powering Government Digital Transformation with Secure & Scalable Technology
             </p>
