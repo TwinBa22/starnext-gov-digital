@@ -107,7 +107,7 @@ const Home = () => {
             backgroundPosition: "center",
           }}
         />
-        <div className="absolute inset-0 hero-gradient opacity-90 z-10" />
+        <div className="absolute inset-0 hero-gradient opacity-60 z-10" />
         <div className="relative z-20 container-custom text-center space-y-6 px-4 animate-fade-in">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
             Powering Government Digital Transformation
