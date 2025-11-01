@@ -13,19 +13,21 @@ import {
   BarChart3,
   GraduationCap,
 } from "lucide-react";
-import servicesInfraImage from "@/assets/services-infrastructure.jpg";
 import datacenterImage from "@/assets/datacenter.jpg";
-import softwareDevImage from "@/assets/software-dev.jpg";
+import softwareDevImage from "@/assets/software-dev-new.jpg";
 import cybersecurityImage from "@/assets/cybersecurity.jpg";
+import infrastructureImage from "@/assets/infrastructure-new.jpg";
+import digitizationImage from "@/assets/digitization-new.jpg";
+import teamImage from "@/assets/team-collaboration.jpg";
 
 const Services = () => {
   const serviceImages: Record<string, string> = {
     "data-centre": datacenterImage,
     "software": softwareDevImage,
     "cybersecurity": cybersecurityImage,
-    "infrastructure": servicesInfraImage,
-    "digitization": softwareDevImage,
-    "training": datacenterImage,
+    "infrastructure": infrastructureImage,
+    "digitization": digitizationImage,
+    "training": teamImage,
   };
 
   const services = [
@@ -144,17 +146,6 @@ const Services = () => {
             <span>Home</span> <span className="mx-2">/</span>
             <span className="text-primary font-semibold">Services</span>
           </div>
-        </div>
-      </section>
-
-      {/* Services Image Section */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <img 
-            src={servicesInfraImage} 
-            alt="Modern IT infrastructure and data center"
-            className="rounded-2xl shadow-2xl w-full h-auto object-cover max-h-[500px] animate-fade-in"
-          />
         </div>
       </section>
 
