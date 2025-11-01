@@ -1,35 +1,38 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Award, Users, TrendingUp, MapPin, Target, Eye } from "lucide-react";
-import aboutTeamImage from "@/assets/about-team.jpg";
-import governmentBuildingImage from "@/assets/government-building.jpg";
+import { Award, Users, TrendingUp, MapPin, Target, Eye, User } from "lucide-react";
 
 const About = () => {
   const leadership = [
     {
-      name: "Tanmay Halaye",
+      name: "Abhishek Wagh",
       role: "Director, Strategy & Government Affairs",
-      description: "Leading strategic initiatives and government partnerships",
+      description: "Leading strategic initiatives and government partnerships.",
     },
     {
       name: "Rishikesh Oza",
-      role: "Director",
-      description: "Driving operational excellence and project delivery",
-    },
-    {
-      name: "Abhishek Wagh",
-      role: "Director",
-      description: "Overseeing technical innovation and implementation",
+      role: "Director, Strategy & Operations",
+      description: "Driving operational excellence and project delivery.",
     },
     {
       name: "Pavan Hasabnis",
-      role: "Director",
-      description: "Managing client relations and business development",
+      role: "Director, Cloud Engineering & Infrastructure",
+      description: "Oversees cloud architecture, infrastructure modernization, and large-scale system deployments. Ensures security, scalability, and high availability across all cloud environments.",
     },
-  ];
-
-  const mentors = [
-    { name: "Chintranjan Das", role: "Strategic Advisor" },
-    { name: "Krishnan", role: "Technical Advisor" },
+    {
+      name: "Tanmay Halaye",
+      role: "Director, Technology & Client Success",
+      description: "Overseeing technical innovation and implementation, while managing client relations and business development. Ensures delivery excellence across solutions and projects.",
+    },
+    {
+      name: "Chintranjan Das",
+      role: "Strategic Advisor, Procurement & Vendor Management",
+      description: "Advises on procurement frameworks, vendor negotiations, and cost optimization strategies. Ensures compliant, transparent, and efficient procurement operations.",
+    },
+    {
+      name: "Krishnan Ramesh",
+      role: "Technical Advisor, Finance & Planning",
+      description: "Guides financial planning, budgeting, and cost control across technical projects. Ensures financial sustainability and investment alignment with organizational goals.",
+    },
   ];
 
   const milestones = [
@@ -61,38 +64,44 @@ const About = () => {
       {/* Company Overview */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1">
-              <img 
-                src={governmentBuildingImage} 
-                alt="Government building representing digital transformation"
-                className="rounded-2xl shadow-xl w-full h-auto object-cover"
-              />
-            </div>
-            
-            <div className="animate-fade-in order-1 lg:order-2">
+          <div className="max-w-5xl mx-auto">
+            <div className="animate-fade-in text-center mb-12">
               <h2 className="text-3xl font-bold mb-6">
                 <span className="gradient-text">Who We Are</span>
               </h2>
               <p className="text-lg text-gray-700 mb-4 leading-relaxed">
-                StarNext Innovations is a government-tech and enterprise digital transformation company delivering comprehensive IT & Non-IT Infrastructure Projects, Data Centre & Cloud Deployments, Software Application Development, Cybersecurity & CERT-IN Audit, Document Digitization, and Project Management for large government departments.
+                StarNext Innovations is a trusted partner in driving digital transformation for government and enterprise sectors. With proven expertise in Data Centre design & deployment, IT infrastructure rollouts, cloud-native solutions (AWS, Azure), and enterprise software development, we deliver scalable and secure digital ecosystems that support mission-critical operations.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                With proven expertise in Data Centre design & deployment, IT infrastructure rollouts, cloud-native solutions (AWS, Azure, NIC Cloud), and enterprise software development, we deliver scalable and secure digital ecosystems that support mission-critical operations.
-              </p>
-            </div>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-16">
-            <div className="animate-fade-in">
-              <img 
-                src={aboutTeamImage} 
-                alt="StarNext Innovations professional team"
-                className="rounded-2xl shadow-xl w-full h-auto object-cover"
-              />
+              
+              <h3 className="text-2xl font-bold mb-4 mt-8">
+                <span className="gradient-text">We specialize in:</span>
+              </h3>
+              
+              <div className="text-left space-y-3 max-w-4xl mx-auto">
+                <div className="flex items-start space-x-3">
+                  <span className="text-secondary text-xl mt-1">✓</span>
+                  <p className="text-lg text-gray-700">Large-scale infrastructure implementation including server rooms, CCTV, access control, UPS, and network backbones.</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <span className="text-secondary text-xl mt-1">✓</span>
+                  <p className="text-lg text-gray-700">Cloud computing & migration services, including AWS architecture design, hosting, and scalable app deployment.</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <span className="text-secondary text-xl mt-1">✓</span>
+                  <p className="text-lg text-gray-700">Custom-built software systems such as Document Management, HRMS, Inventory, Visitor Management, and Mobile Field Apps tailored for public sector efficiency.</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <span className="text-secondary text-xl mt-1">✓</span>
+                  <p className="text-lg text-gray-700">Security-first approach with integrated CERT-IN audits, SEIM-SOAR, and endpoint protection services.</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <span className="text-secondary text-xl mt-1">✓</span>
+                  <p className="text-lg text-gray-700">Our commitment to innovation, sustainability, and social accountability drives every engagement, enabling clients to adapt quickly in an ever-evolving digital landscape.</p>
+                </div>
+              </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-6 animate-scale-in">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 animate-scale-in mt-12">
               <Card className="border-2 border-secondary shadow-lg">
                 <CardContent className="p-6 text-center">
                   <Award className="mx-auto mb-4 text-secondary" size={48} />
@@ -208,37 +217,20 @@ const About = () => {
             <p className="text-lg text-gray-600">Experienced leaders driving innovation and excellence</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {leadership.map((leader, index) => (
               <Card key={index} className="text-center shadow-lg card-hover animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
                 <CardContent className="p-6">
-                  <div className="w-20 h-20 rounded-full hero-gradient flex items-center justify-center mx-auto mb-4">
-                    <Users className="text-white" size={32} />
+                  <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center mx-auto mb-4 border-4 border-secondary/20">
+                    <User className="text-primary" size={48} />
                   </div>
-                  <h3 className="text-lg font-bold text-primary mb-1">
+                  <h3 className="text-xl font-bold text-primary mb-2">
                     {leader.name}
                   </h3>
-                  <p className="text-sm font-semibold text-secondary mb-2">
+                  <p className="text-sm font-semibold text-secondary mb-3">
                     {leader.role}
                   </p>
-                  <p className="text-sm text-gray-600">{leader.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          <div className="text-center mb-6">
-            <h3 className="text-2xl font-bold text-primary mb-6">Strategic Mentors</h3>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-            {mentors.map((mentor, index) => (
-              <Card key={index} className="text-center shadow-md card-hover animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
-                <CardContent className="p-6">
-                  <h4 className="text-lg font-bold text-primary mb-1">
-                    {mentor.name}
-                  </h4>
-                  <p className="text-sm text-secondary font-semibold">{mentor.role}</p>
+                  <p className="text-sm text-gray-600 leading-relaxed">{leader.description}</p>
                 </CardContent>
               </Card>
             ))}
