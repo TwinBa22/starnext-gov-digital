@@ -23,6 +23,7 @@ import infrastructureImg from "@/assets/infrastructure-new.jpg";
 import digitizationImg from "@/assets/digitization-new.jpg";
 import govBuildingImg from "@/assets/government-building.jpg";
 import teamImg from "@/assets/team-collaboration.jpg";
+import tasmacImg from "@/assets/tasmac-tracking.jpg";
 
 const Home = () => {
   const stats = [
@@ -219,8 +220,13 @@ const Home = () => {
             {caseStudies.map((study, index) => (
               <Card key={index} className="card-hover shadow-lg animate-scale-in overflow-hidden" style={{ animationDelay: `${index * 0.1}s` }}>
                 <CardContent className="p-0">
-                  <div className="h-48 overflow-hidden bg-gradient-to-br from-primary to-secondary/50 flex items-center justify-center">
-                    <Award className="text-white" size={64} />
+                  <div className="h-48 overflow-hidden relative">
+                    <img 
+                      src={index === 0 ? datacenterImg : index === 1 ? govBuildingImg : tasmacImg} 
+                      alt={study.title}
+                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 hero-gradient opacity-40" />
                   </div>
                   <div className="p-6">
                     <div className="flex items-center space-x-2 mb-4">
