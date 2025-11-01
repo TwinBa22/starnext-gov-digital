@@ -23,6 +23,9 @@ const About = () => {
       role: "Director, Technology & Client Success",
       description: "Overseeing technical innovation and implementation, while managing client relations and business development. Ensures delivery excellence across solutions and projects.",
     },
+  ];
+
+  const advisors = [
     {
       name: "Chintranjan Das",
       role: "Strategic Advisor, Procurement & Vendor Management",
@@ -36,13 +39,53 @@ const About = () => {
   ];
 
   const milestones = [
-    { year: "2018", event: "Company Founded" },
-    { year: "2019", event: "MSME Certified" },
-    { year: "2020", event: "Startup India Recognition" },
-    { year: "2021", event: "First Major Government Project" },
-    { year: "2022", event: "Pan-India Expansion" },
-    { year: "2023", event: "150+ Team Members" },
-    { year: "2024", event: "₹15.65 Cr Revenue Milestone" },
+    { 
+      date: "AUG 2020", 
+      title: "Social Justice Department, Maharashtra",
+      achievements: [
+        "Launched the Caste Certificate Verification Information System",
+        "8.66+ lakh applicants served",
+        "5.90+ lakh digital certificates issued with secure digital signatures",
+        "₹15.65+ Cr revenue generated"
+      ]
+    },
+    { 
+      date: "MAY 2022", 
+      title: "Maharashtra Tribal Department (TRTI, Pune)",
+      achievements: [
+        "Developed and launched an E-Commerce portal for SHGs and tribal artisans",
+        "130+ SHGs and artisans onboarded; 400+ PAN India users",
+        "₹3.4+ lakh in revenue generated till date"
+      ]
+    },
+    { 
+      date: "OCT 2023", 
+      title: "TASMAC, Tamil Nadu",
+      achievements: [
+        "Developed and implemented Smart Excise Track & Trace Monitoring System",
+        "38 depots and 5,500 retail shops integrated for full transparency and compliance"
+      ]
+    },
+    { 
+      date: "AUG 2024", 
+      title: "Team Growth & Expansion",
+      achievements: [
+        "150+ Full-Time Employees",
+        "70+ Contractual & Field Staff",
+        "20+ Interns & Trainees (Tech & Support)"
+      ]
+    },
+    { 
+      date: "MAY 2025", 
+      title: "Computerisation of Forensic Science Laboratories (FSL), MH",
+      achievements: [
+        "Jan 2024 – Project Kick-off",
+        "Aug 2024 – Data Centre Inauguration",
+        "Oct 2024 – Phase 1 Applications Live",
+        "Dec 2024 – Phase 2 Applications Live",
+        "May 2025 – Project Go-Live across all locations"
+      ]
+    },
   ];
 
   return (
@@ -217,7 +260,7 @@ const About = () => {
             <p className="text-lg text-gray-600">Experienced leaders driving innovation and excellence</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-16">
             {leadership.map((leader, index) => (
               <Card key={index} className="text-center shadow-lg card-hover animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
                 <CardContent className="p-6">
@@ -235,6 +278,32 @@ const About = () => {
               </Card>
             ))}
           </div>
+
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold mb-2">
+              <span className="gradient-text">Advisory Body</span>
+            </h3>
+            <p className="text-gray-600">Strategic guidance and expertise</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {advisors.map((advisor, index) => (
+              <Card key={index} className="text-center shadow-lg card-hover animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+                <CardContent className="p-6">
+                  <div className="w-32 h-32 rounded-full bg-gradient-to-br from-secondary/10 to-primary/10 flex items-center justify-center mx-auto mb-4 border-4 border-primary/20">
+                    <User className="text-secondary" size={48} />
+                  </div>
+                  <h3 className="text-xl font-bold text-primary mb-2">
+                    {advisor.name}
+                  </h3>
+                  <p className="text-sm font-semibold text-secondary mb-3">
+                    {advisor.role}
+                  </p>
+                  <p className="text-sm text-gray-600 leading-relaxed">{advisor.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -248,18 +317,27 @@ const About = () => {
             <p className="text-lg text-gray-600">Milestones that define our growth</p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="space-y-8">
               {milestones.map((milestone, index) => (
-                <div key={index} className="flex items-center space-x-6 animate-slide-in-right" style={{ animationDelay: `${index * 0.1}s` }}>
-                  <div className="w-24 h-24 flex-shrink-0 rounded-full hero-gradient flex items-center justify-center">
-                    <span className="text-white font-bold text-xl">{milestone.year}</span>
+                <div key={index} className="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-6 animate-slide-in-right" style={{ animationDelay: `${index * 0.1}s` }}>
+                  <div className="w-32 h-32 flex-shrink-0 rounded-full hero-gradient flex flex-col items-center justify-center shadow-lg">
+                    <span className="text-white font-bold text-lg">{milestone.date.split(' ')[0]}</span>
+                    <span className="text-white font-bold text-2xl">{milestone.date.split(' ')[1]}</span>
                   </div>
-                  <Card className="flex-1 shadow-md card-hover">
+                  <Card className="flex-1 shadow-lg card-hover">
                     <CardContent className="p-6">
-                      <p className="text-lg font-semibold text-primary">
-                        {milestone.event}
-                      </p>
+                      <h3 className="text-xl font-bold text-primary mb-4">
+                        {milestone.title}
+                      </h3>
+                      <ul className="space-y-2">
+                        {milestone.achievements.map((achievement, idx) => (
+                          <li key={idx} className="flex items-start space-x-2">
+                            <span className="text-secondary mt-1">✓</span>
+                            <span className="text-gray-700">{achievement}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </CardContent>
                   </Card>
                 </div>
