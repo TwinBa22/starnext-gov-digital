@@ -1,8 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Building2, Users, FileText, Bell, BarChart3, Globe } from "lucide-react";
-import ecivicDashboard from "@/assets/products/ecivic-dashboard.jpg";
-import ecivicCitizenPortal from "@/assets/products/ecivic-citizen-portal.jpg";
+import { ArrowLeft, Building2, Users, FileText, Bell, BarChart3, Globe, Wrench, FileCheck, DollarSign, MessageSquare } from "lucide-react";
+import ecivicDashboard from "@/assets/products/ecivic-dashboard-new.jpg";
+import ecivicCitizenPortal from "@/assets/products/ecivic-citizen-new.jpg";
 import ecivicPlatform from "@/assets/products/ecivic-platform.jpg";
 import ProductDemoForm from "@/components/ProductDemoForm";
 
@@ -47,6 +47,53 @@ const ECivic = () => {
     "Better resource allocation and planning",
     "Streamlined inter-department coordination",
     "Data-driven governance and policy making"
+  ];
+
+  const modules = [
+    {
+      icon: Wrench,
+      title: "Public Works",
+      description: "Manage infrastructure projects, maintenance requests, and asset tracking",
+      features: [
+        "Project management and scheduling",
+        "Work order generation and tracking",
+        "Equipment and vehicle fleet management",
+        "Citizen complaint integration"
+      ]
+    },
+    {
+      icon: FileCheck,
+      title: "Licensing",
+      description: "Streamline license and permit applications with automated workflows",
+      features: [
+        "Online application submission",
+        "Automated approval workflows",
+        "Document verification and management",
+        "Payment processing and receipts"
+      ]
+    },
+    {
+      icon: DollarSign,
+      title: "Property Tax",
+      description: "Complete property tax management from assessment to collection",
+      features: [
+        "Property assessment and valuation",
+        "Online tax payment portal",
+        "Automated notices and reminders",
+        "Tax arrears tracking and reporting"
+      ]
+    },
+    {
+      icon: MessageSquare,
+      title: "Grievance Management",
+      description: "Efficient system for handling citizen complaints and requests",
+      features: [
+        "Multi-channel complaint registration",
+        "Automated routing to departments",
+        "Real-time status tracking",
+        "Resolution timeline monitoring"
+      ]
+    }
   ];
 
   return (
@@ -122,6 +169,37 @@ const ECivic = () => {
                 <p className="text-gray-600 text-sm">Easy-to-use portal for citizen services</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Department Modules */}
+      <section className="py-10 md:py-12">
+        <div className="container-custom">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold mb-3">Department Modules</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Comprehensive modules designed for specific government departments with workflows tailored to their unique requirements
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {modules.map((module, index) => (
+              <Card key={index} className="card-hover">
+                <CardContent className="p-6">
+                  <module.icon className="text-primary mb-4" size={40} />
+                  <h3 className="text-xl font-semibold mb-2">{module.title}</h3>
+                  <p className="text-gray-700 mb-4">{module.description}</p>
+                  <ul className="space-y-2">
+                    {module.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start text-sm">
+                        <span className="text-primary mr-2 mt-0.5">•</span>
+                        <span className="text-gray-600">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
