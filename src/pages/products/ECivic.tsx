@@ -1,6 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Building2, Users, FileText, Bell, BarChart3, Globe } from "lucide-react";
+import ecivicDashboard from "@/assets/products/ecivic-dashboard.jpg";
+import ecivicCitizenPortal from "@/assets/products/ecivic-citizen-portal.jpg";
 
 const ECivic = () => {
   const features = [
@@ -94,6 +96,29 @@ const ECivic = () => {
             </div>
             <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg p-8 flex items-center justify-center">
               <Building2 className="text-primary" size={200} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Screenshots */}
+      <section className="py-12 md:py-16 bg-gray-50">
+        <div className="container-custom">
+          <h2 className="text-3xl font-bold text-center mb-12">Platform Interfaces</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="overflow-hidden rounded-lg shadow-lg">
+              <img src={ecivicDashboard} alt="eCivic Dashboard" className="w-full h-full object-cover" />
+              <div className="bg-white p-4">
+                <h3 className="font-semibold text-lg">City Dashboard</h3>
+                <p className="text-gray-600 text-sm">Unified command center for city administration</p>
+              </div>
+            </div>
+            <div className="overflow-hidden rounded-lg shadow-lg">
+              <img src={ecivicCitizenPortal} alt="eCivic Citizen Portal" className="w-full h-full object-cover" />
+              <div className="bg-white p-4">
+                <h3 className="font-semibold text-lg">Citizen Portal</h3>
+                <p className="text-gray-600 text-sm">Easy-to-use portal for citizen services</p>
+              </div>
             </div>
           </div>
         </div>

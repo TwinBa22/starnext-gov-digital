@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Heart, MapPin, Thermometer, Bell, BarChart, Smartphone } from "lucide-react";
+import livestockDashboard from "@/assets/products/livestock-dashboard.jpg";
 
 const LivestockMonitoring = () => {
   const features = [
@@ -94,6 +95,22 @@ const LivestockMonitoring = () => {
             </div>
             <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg p-8 flex items-center justify-center">
               <Heart className="text-primary" size={200} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Screenshots */}
+      <section className="py-12 md:py-16 bg-gray-50">
+        <div className="container-custom">
+          <h2 className="text-3xl font-bold text-center mb-12">Monitoring Dashboard</h2>
+          <div className="max-w-5xl mx-auto">
+            <div className="overflow-hidden rounded-lg shadow-lg">
+              <img src={livestockDashboard} alt="Livestock Monitoring Dashboard" className="w-full h-full object-cover" />
+              <div className="bg-white p-6">
+                <h3 className="font-semibold text-lg mb-2">Real-Time Herd Monitoring</h3>
+                <p className="text-gray-600">GPS tracking, health metrics, and analytics for complete livestock management</p>
+              </div>
             </div>
           </div>
         </div>

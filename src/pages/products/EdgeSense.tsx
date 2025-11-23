@@ -1,6 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Cpu, Zap, Shield, BarChart, Camera, Cloud } from "lucide-react";
+import edgeSenseDashboard from "@/assets/products/edgesense-dashboard.jpg";
+import edgeSenseMobile from "@/assets/products/edgesense-mobile.jpg";
 
 const EdgeSense = () => {
   const features = [
@@ -94,6 +96,21 @@ const EdgeSense = () => {
             </div>
             <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg p-8 flex items-center justify-center">
               <Cpu className="text-primary" size={200} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Screenshots */}
+      <section className="py-12 md:py-16 bg-gray-50">
+        <div className="container-custom">
+          <h2 className="text-3xl font-bold text-center mb-12">See It In Action</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="overflow-hidden rounded-lg shadow-lg">
+              <img src={edgeSenseDashboard} alt="EdgeSense Dashboard Interface" className="w-full h-full object-cover" />
+            </div>
+            <div className="overflow-hidden rounded-lg shadow-lg">
+              <img src={edgeSenseMobile} alt="EdgeSense Mobile App" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

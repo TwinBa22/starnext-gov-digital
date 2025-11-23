@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowLeft, AlertCircle, MapPin, Radio, Users, Cloud, Phone } from "lucide-react";
+import emsCommandCenter from "@/assets/products/ems-command-center.jpg";
 
 const EMS = () => {
   const features = [
@@ -94,6 +95,22 @@ const EMS = () => {
             </div>
             <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg p-8 flex items-center justify-center">
               <AlertCircle className="text-primary" size={200} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Screenshots */}
+      <section className="py-12 md:py-16 bg-gray-50">
+        <div className="container-custom">
+          <h2 className="text-3xl font-bold text-center mb-12">Command Center Interface</h2>
+          <div className="max-w-5xl mx-auto">
+            <div className="overflow-hidden rounded-lg shadow-lg">
+              <img src={emsCommandCenter} alt="Emergency Management Command Center" className="w-full h-full object-cover" />
+              <div className="bg-white p-6">
+                <h3 className="font-semibold text-lg mb-2">Real-Time Disaster Management</h3>
+                <p className="text-gray-600">Global incident tracking, resource allocation, and multi-agency coordination dashboard</p>
+              </div>
             </div>
           </div>
         </div>
