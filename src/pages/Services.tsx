@@ -12,6 +12,14 @@ import {
   Smartphone,
   BarChart3,
   GraduationCap,
+  Brain,
+  Plane,
+  Globe,
+  Container,
+  ShieldCheck,
+  Boxes,
+  Eye,
+  Satellite,
 } from "lucide-react";
 import datacenterImage from "@/assets/datacenter.jpg";
 import softwareDevImage from "@/assets/software-dev-new.jpg";
@@ -149,9 +157,232 @@ const Services = () => {
         </div>
       </section>
 
+      {/* Technology Capabilities */}
+      <section className="py-12 md:py-16 bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <span className="gradient-text">Technology Capabilities</span>
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Comprehensive technical expertise across AI, Cloud, IoT, and Cybersecurity
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* AI Capabilities */}
+            <Card className="shadow-lg card-hover animate-fade-in overflow-hidden">
+              <div className="h-2 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+              <CardContent className="p-6">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-500/10 to-pink-500/10 flex items-center justify-center">
+                    <Brain className="text-purple-600" size={32} />
+                  </div>
+                  <h3 className="text-xl font-bold text-primary">AI Capabilities</h3>
+                </div>
+                <div className="space-y-3 text-sm">
+                  <div>
+                    <h4 className="font-semibold text-secondary mb-2">Computer Vision</h4>
+                    <p className="text-gray-600">YOLO, MobileNet, ANPR, Face Recognition, Violence & Anomaly Detection, Crowd Monitoring</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-secondary mb-2">NLP & LLM</h4>
+                    <p className="text-gray-600">Chatbots, Document Summarization, Auto-annexure, Meeting Transcription, Multilingual Translation</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-secondary mb-2">Predictive Analytics</h4>
+                    <p className="text-gray-600">Disaster Risk, Disease Prediction, Congestion Forecasting, Maintenance Prediction</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-secondary mb-2">Generative AI</h4>
+                    <p className="text-gray-600">Report Generation, CLM Automation, AI-powered Scripts</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Drone & IoT */}
+            <Card className="shadow-lg card-hover animate-fade-in overflow-hidden" style={{ animationDelay: "0.1s" }}>
+              <div className="h-2 bg-gradient-to-r from-blue-500 to-cyan-500"></div>
+              <CardContent className="p-6">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 flex items-center justify-center">
+                    <Plane className="text-blue-600" size={32} />
+                  </div>
+                  <h3 className="text-xl font-bold text-primary">Drone & IoT</h3>
+                </div>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>UAV-based Surveillance</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>NDVI & Multispectral Imaging</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>IoT Livestock Sensors</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>LoRaWAN/4G/5G Edge Nodes</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>GPS Geo-fencing</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* GIS & Remote Sensing */}
+            <Card className="shadow-lg card-hover animate-fade-in overflow-hidden" style={{ animationDelay: "0.2s" }}>
+              <div className="h-2 bg-gradient-to-r from-green-500 to-emerald-500"></div>
+              <CardContent className="p-6">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-green-500/10 to-emerald-500/10 flex items-center justify-center">
+                    <Satellite className="text-green-600" size={32} />
+                  </div>
+                  <h3 className="text-xl font-bold text-primary">GIS & Remote Sensing</h3>
+                </div>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>Satellite-based Change Detection</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>Land Use/Land Cover (LULC)</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>2D/3D Mapping</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>WebGIS Portals</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>Ground Truthing & Field Mapping</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Cloud & DevOps */}
+            <Card className="shadow-lg card-hover animate-fade-in overflow-hidden" style={{ animationDelay: "0.3s" }}>
+              <div className="h-2 bg-gradient-to-r from-orange-500 to-amber-500"></div>
+              <CardContent className="p-6">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-orange-500/10 to-amber-500/10 flex items-center justify-center">
+                    <Container className="text-orange-600" size={32} />
+                  </div>
+                  <h3 className="text-xl font-bold text-primary">Cloud & DevOps</h3>
+                </div>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>Azure, AWS, GCP Deployment</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>Kubernetes Clusters</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>Cloud-native Microservices</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>API Gateway & Integration</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>CI/CD Pipelines</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Cybersecurity */}
+            <Card className="shadow-lg card-hover animate-fade-in overflow-hidden" style={{ animationDelay: "0.4s" }}>
+              <div className="h-2 bg-gradient-to-r from-red-500 to-rose-500"></div>
+              <CardContent className="p-6">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-red-500/10 to-rose-500/10 flex items-center justify-center">
+                    <ShieldCheck className="text-red-600" size={32} />
+                  </div>
+                  <h3 className="text-xl font-bold text-primary">Cybersecurity</h3>
+                </div>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>SIEM/SOAR Integration</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>IAM & RBAC</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>Threat Monitoring</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>Compliance & Audit Tools</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Enterprise Systems */}
+            <Card className="shadow-lg card-hover animate-fade-in overflow-hidden" style={{ animationDelay: "0.5s" }}>
+              <div className="h-2 bg-gradient-to-r from-indigo-500 to-violet-500"></div>
+              <CardContent className="p-6">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-indigo-500/10 to-violet-500/10 flex items-center justify-center">
+                    <Boxes className="text-indigo-600" size={32} />
+                  </div>
+                  <h3 className="text-xl font-bold text-primary">Enterprise Systems</h3>
+                </div>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>ERP (Manufacturing/HR/CRM)</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>Workflow Automation</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>Ticketing & Helpdesk</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>Integration with AD/LDAP</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Services Grid */}
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="container-custom">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <span className="gradient-text">Our Services</span>
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              End-to-end technology services for government and enterprise transformation
+            </p>
+          </div>
+
           <div className="space-y-24">
             {services.map((service, index) => (
               <div
@@ -216,186 +447,6 @@ const Services = () => {
           </div>
         </div>
       </section>
-
-      {/* Technology Capabilities */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="gradient-text">Technology Capabilities</span>
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Comprehensive technical expertise across AI, Cloud, IoT, and Cybersecurity
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* AI Capabilities */}
-            <Card className="shadow-lg card-hover animate-fade-in">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-primary mb-4">AI Capabilities</h3>
-                <div className="space-y-3 text-sm">
-                  <div>
-                    <h4 className="font-semibold text-secondary mb-2">Computer Vision</h4>
-                    <p className="text-gray-600">YOLO, MobileNet, ANPR, Face Recognition, Violence & Anomaly Detection, Crowd Monitoring</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-secondary mb-2">NLP & LLM</h4>
-                    <p className="text-gray-600">Chatbots, Document Summarization, Auto-annexure, Meeting Transcription, Multilingual Translation</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-secondary mb-2">Predictive Analytics</h4>
-                    <p className="text-gray-600">Disaster Risk, Disease Prediction, Congestion Forecasting, Maintenance Prediction</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-secondary mb-2">Generative AI</h4>
-                    <p className="text-gray-600">Report Generation, CLM Automation, AI-powered Scripts</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Drone & IoT */}
-            <Card className="shadow-lg card-hover animate-fade-in" style={{ animationDelay: "0.1s" }}>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-primary mb-4">Drone & IoT</h3>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li className="flex items-start space-x-2">
-                    <span className="text-secondary mt-1">✓</span>
-                    <span>UAV-based Surveillance</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-secondary mt-1">✓</span>
-                    <span>NDVI & Multispectral Imaging</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-secondary mt-1">✓</span>
-                    <span>IoT Livestock Sensors</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-secondary mt-1">✓</span>
-                    <span>LoRaWAN/4G/5G Edge Nodes</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-secondary mt-1">✓</span>
-                    <span>GPS Geo-fencing</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            {/* GIS & Remote Sensing */}
-            <Card className="shadow-lg card-hover animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-primary mb-4">GIS & Remote Sensing</h3>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li className="flex items-start space-x-2">
-                    <span className="text-secondary mt-1">✓</span>
-                    <span>Satellite-based Change Detection</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-secondary mt-1">✓</span>
-                    <span>Land Use/Land Cover (LULC)</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-secondary mt-1">✓</span>
-                    <span>2D/3D Mapping</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-secondary mt-1">✓</span>
-                    <span>WebGIS Portals</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-secondary mt-1">✓</span>
-                    <span>Ground Truthing & Field Mapping</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            {/* Cloud & DevOps */}
-            <Card className="shadow-lg card-hover animate-fade-in" style={{ animationDelay: "0.3s" }}>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-primary mb-4">Cloud & DevOps</h3>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li className="flex items-start space-x-2">
-                    <span className="text-secondary mt-1">✓</span>
-                    <span>Azure, AWS, GCP Deployment</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-secondary mt-1">✓</span>
-                    <span>Kubernetes Clusters</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-secondary mt-1">✓</span>
-                    <span>Cloud-native Microservices</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-secondary mt-1">✓</span>
-                    <span>API Gateway & Integration</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-secondary mt-1">✓</span>
-                    <span>CI/CD Pipelines</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            {/* Cybersecurity */}
-            <Card className="shadow-lg card-hover animate-fade-in" style={{ animationDelay: "0.4s" }}>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-primary mb-4">Cybersecurity</h3>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li className="flex items-start space-x-2">
-                    <span className="text-secondary mt-1">✓</span>
-                    <span>SIEM/SOAR Integration</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-secondary mt-1">✓</span>
-                    <span>IAM & RBAC</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-secondary mt-1">✓</span>
-                    <span>Threat Monitoring</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-secondary mt-1">✓</span>
-                    <span>Compliance & Audit Tools</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            {/* Enterprise Systems */}
-            <Card className="shadow-lg card-hover animate-fade-in" style={{ animationDelay: "0.5s" }}>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-primary mb-4">Enterprise Systems</h3>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li className="flex items-start space-x-2">
-                    <span className="text-secondary mt-1">✓</span>
-                    <span>ERP (Manufacturing/HR/CRM)</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-secondary mt-1">✓</span>
-                    <span>Workflow Automation</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-secondary mt-1">✓</span>
-                    <span>Ticketing & Helpdesk</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-secondary mt-1">✓</span>
-                    <span>Integration with AD/LDAP</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
       <section className="section-padding hero-gradient text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-white rounded-full blur-3xl"></div>
