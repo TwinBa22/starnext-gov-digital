@@ -103,29 +103,6 @@ const AIGovernance = () => {
         </div>
       </section>
 
-      {/* Product Screenshots */}
-      <section className="py-10 md:py-12 bg-gray-50">
-        <div className="container-custom">
-          <h2 className="text-3xl font-bold text-center mb-8">AI-Powered Interfaces</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="overflow-hidden rounded-lg shadow-lg">
-              <img src={aiGovernanceChatbot} alt="AI Governance Chatbot Interface" className="w-full h-full object-cover blur-sm" />
-              <div className="bg-white p-4">
-                <h3 className="font-semibold text-lg blur-sm">AI Chatbot Dashboard</h3>
-                <p className="text-gray-600 text-sm blur-sm">Intelligent grievance routing and resolution system</p>
-              </div>
-            </div>
-            <div className="overflow-hidden rounded-lg shadow-lg">
-              <img src={aiGovernanceWhatsApp} alt="WhatsApp Integration" className="w-full h-full object-cover blur-sm" />
-              <div className="bg-white p-4">
-                <h3 className="font-semibold text-lg blur-sm">WhatsApp Integration</h3>
-                <p className="text-gray-600 text-sm blur-sm">Citizens can file complaints via WhatsApp</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Key Features */}
       <section className="py-10 md:py-12 bg-gray-50">
         <div className="container-custom">
