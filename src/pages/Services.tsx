@@ -217,40 +217,180 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Technology Stack */}
-      <section className="section-padding bg-gray-50">
+      {/* Technology Capabilities */}
+      <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="gradient-text">Technology Stack</span>
+              <span className="gradient-text">Technology Capabilities</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Leveraging cutting-edge technologies for robust and scalable solutions
+              Comprehensive technical expertise across AI, Cloud, IoT, and Cybersecurity
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { icon: Cloud, name: "AWS & Azure" },
-              { icon: Database, name: "PostgreSQL, MongoDB" },
-              { icon: Wifi, name: "NIC Cloud" },
-              { icon: Lock, name: "CERT-IN Compliant" },
-              { icon: Smartphone, name: "React Native" },
-              { icon: Code, name: "Node.js & Python" },
-              { icon: Network, name: "Cisco Networking" },
-              { icon: BarChart3, name: "Power BI & Tableau" },
-            ].map((tech, index) => (
-              <Card
-                key={index}
-                className="text-center shadow-md card-hover animate-fade-in"
-                style={{ animationDelay: `${index * 0.05}s` }}
-              >
-                <CardContent className="p-6">
-                  <tech.icon className="mx-auto mb-3 text-secondary" size={40} />
-                  <p className="font-semibold text-primary">{tech.name}</p>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* AI Capabilities */}
+            <Card className="shadow-lg card-hover animate-fade-in">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-primary mb-4">AI Capabilities</h3>
+                <div className="space-y-3 text-sm">
+                  <div>
+                    <h4 className="font-semibold text-secondary mb-2">Computer Vision</h4>
+                    <p className="text-gray-600">YOLO, MobileNet, ANPR, Face Recognition, Violence & Anomaly Detection, Crowd Monitoring</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-secondary mb-2">NLP & LLM</h4>
+                    <p className="text-gray-600">Chatbots, Document Summarization, Auto-annexure, Meeting Transcription, Multilingual Translation</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-secondary mb-2">Predictive Analytics</h4>
+                    <p className="text-gray-600">Disaster Risk, Disease Prediction, Congestion Forecasting, Maintenance Prediction</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-secondary mb-2">Generative AI</h4>
+                    <p className="text-gray-600">Report Generation, CLM Automation, AI-powered Scripts</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Drone & IoT */}
+            <Card className="shadow-lg card-hover animate-fade-in" style={{ animationDelay: "0.1s" }}>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-primary mb-4">Drone & IoT</h3>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>UAV-based Surveillance</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>NDVI & Multispectral Imaging</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>IoT Livestock Sensors</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>LoRaWAN/4G/5G Edge Nodes</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>GPS Geo-fencing</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* GIS & Remote Sensing */}
+            <Card className="shadow-lg card-hover animate-fade-in" style={{ animationDelay: "0.2s" }}>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-primary mb-4">GIS & Remote Sensing</h3>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>Satellite-based Change Detection</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>Land Use/Land Cover (LULC)</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>2D/3D Mapping</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>WebGIS Portals</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>Ground Truthing & Field Mapping</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Cloud & DevOps */}
+            <Card className="shadow-lg card-hover animate-fade-in" style={{ animationDelay: "0.3s" }}>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-primary mb-4">Cloud & DevOps</h3>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>Azure, AWS, GCP Deployment</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>Kubernetes Clusters</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>Cloud-native Microservices</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>API Gateway & Integration</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>CI/CD Pipelines</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Cybersecurity */}
+            <Card className="shadow-lg card-hover animate-fade-in" style={{ animationDelay: "0.4s" }}>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-primary mb-4">Cybersecurity</h3>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>SIEM/SOAR Integration</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>IAM & RBAC</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>Threat Monitoring</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>Compliance & Audit Tools</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Enterprise Systems */}
+            <Card className="shadow-lg card-hover animate-fade-in" style={{ animationDelay: "0.5s" }}>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-primary mb-4">Enterprise Systems</h3>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>ERP (Manufacturing/HR/CRM)</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>Workflow Automation</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>Ticketing & Helpdesk</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-secondary mt-1">✓</span>
+                    <span>Integration with AD/LDAP</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
