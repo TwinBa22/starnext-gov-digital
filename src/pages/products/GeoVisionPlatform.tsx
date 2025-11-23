@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Satellite, Map, Layers, Camera, BarChart, Globe } from "lucide-react";
 import geoVisionPlatformInterface from "@/assets/products/geovision-platform-interface.jpg";
+import ProductDemoForm from "@/components/ProductDemoForm";
 
 const GeoVisionPlatform = () => {
   const features = [
@@ -152,6 +153,13 @@ const GeoVisionPlatform = () => {
               </CardContent>
             </Card>
           </div>
+        </div>
+      </section>
+
+      {/* Demo Request Form */}
+      <section className="py-12 md:py-16">
+        <div className="container-custom">
+          <ProductDemoForm productName="GeoVision Platform - Geospatial Analytics" />
         </div>
       </section>
 

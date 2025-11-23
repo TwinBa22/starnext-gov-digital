@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Camera, Shield, BarChart3, Wifi, AlertCircle } from "lucide-react";
 import productImage from "@/assets/products/smart-city.jpg";
+import ProductDemoForm from "@/components/ProductDemoForm";
 
 const SmartTraffic = () => {
   const features = [
@@ -156,6 +157,13 @@ const SmartTraffic = () => {
               </CardContent>
             </Card>
           </div>
+        </div>
+      </section>
+
+      {/* Demo Request Form */}
+      <section className="py-12 md:py-16">
+        <div className="container-custom">
+          <ProductDemoForm productName="AI Smart Traffic Management System (STMS)" />
         </div>
       </section>
 

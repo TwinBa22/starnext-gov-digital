@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Plane, Droplets, MapPin, Camera, BarChart, Leaf } from "lucide-react";
 import droneAgricultureControl from "@/assets/products/drone-agriculture-control.jpg";
+import ProductDemoForm from "@/components/ProductDemoForm";
 
 const DroneAgriculture = () => {
   const features = [
@@ -152,6 +153,13 @@ const DroneAgriculture = () => {
               </CardContent>
             </Card>
           </div>
+        </div>
+      </section>
+
+      {/* Demo Request Form */}
+      <section className="py-12 md:py-16">
+        <div className="container-custom">
+          <ProductDemoForm productName="Drone Agriculture Platform" />
         </div>
       </section>
 

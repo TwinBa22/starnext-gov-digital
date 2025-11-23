@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Bot, Workflow, MessageSquare, FileText, Zap, Shield } from "lucide-react";
 import aiGovernanceChatbot from "@/assets/products/ai-governance-chatbot.jpg";
 import aiGovernanceWhatsApp from "@/assets/products/ai-governance-whatsapp.jpg";
+import ProductDemoForm from "@/components/ProductDemoForm";
 
 const AIGovernance = () => {
   const features = [
@@ -160,6 +161,13 @@ const AIGovernance = () => {
               </CardContent>
             </Card>
           </div>
+        </div>
+      </section>
+
+      {/* Demo Request Form */}
+      <section className="py-12 md:py-16">
+        <div className="container-custom">
+          <ProductDemoForm productName="Agentic AI Governance Platform" />
         </div>
       </section>
 
