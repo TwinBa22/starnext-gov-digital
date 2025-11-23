@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Camera, Shield, BarChart3, Wifi, AlertCircle } from "lucide-react";
+import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
 import productImage from "@/assets/products/smart-traffic-dashboard.jpg";
 import ProductDemoForm from "@/components/ProductDemoForm";
 
@@ -40,6 +41,35 @@ const SmartTraffic = () => {
     "Comprehensive analytics dashboard",
     "Scalable across multiple cities",
     "Integration with existing CCTV infrastructure"
+  ];
+
+  // Violation trends data
+  const violationData = [
+    { month: "Jan", noHelmet: 450, tripleRiding: 320, redLight: 280, overspeeding: 390 },
+    { month: "Feb", noHelmet: 420, tripleRiding: 310, redLight: 265, overspeeding: 370 },
+    { month: "Mar", noHelmet: 380, tripleRiding: 285, redLight: 240, overspeeding: 345 },
+    { month: "Apr", noHelmet: 340, tripleRiding: 260, redLight: 210, overspeeding: 315 },
+    { month: "May", noHelmet: 290, tripleRiding: 230, redLight: 185, overspeeding: 280 },
+    { month: "Jun", noHelmet: 250, tripleRiding: 200, redLight: 160, overspeeding: 245 },
+  ];
+
+  // Congestion patterns data (hourly)
+  const congestionData = [
+    { time: "6 AM", level: 30 },
+    { time: "7 AM", level: 55 },
+    { time: "8 AM", level: 85 },
+    { time: "9 AM", level: 95 },
+    { time: "10 AM", level: 70 },
+    { time: "11 AM", level: 65 },
+    { time: "12 PM", level: 75 },
+    { time: "1 PM", level: 70 },
+    { time: "2 PM", level: 60 },
+    { time: "3 PM", level: 65 },
+    { time: "4 PM", level: 75 },
+    { time: "5 PM", level: 90 },
+    { time: "6 PM", level: 95 },
+    { time: "7 PM", level: 80 },
+    { time: "8 PM", level: 60 },
   ];
 
   return (
@@ -132,13 +162,71 @@ const SmartTraffic = () => {
         </div>
       </section>
 
-      {/* Benefits */}
+      {/* Analytics & Insights */}
       <section className="py-10 md:py-12 bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-10 animate-fade-in">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <span className="gradient-text">Real-Time Analytics & Insights</span>
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Track violation trends and congestion patterns with comprehensive analytics
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Violation Trends Chart */}
+            <Card className="shadow-xl">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-primary mb-4">Monthly Violation Trends</h3>
+                <p className="text-sm text-gray-600 mb-6">
+                  Violation reduction over 6 months after STMS deployment
+                </p>
+                <ResponsiveContainer width="100%" height={300}>
+                  <LineChart data={violationData}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="month" />
+                    <YAxis />
+                    <Tooltip />
+                    <Legend />
+                    <Line type="monotone" dataKey="noHelmet" stroke="#FF6B6B" name="No Helmet" strokeWidth={2} />
+                    <Line type="monotone" dataKey="tripleRiding" stroke="#4ECDC4" name="Triple Riding" strokeWidth={2} />
+                    <Line type="monotone" dataKey="redLight" stroke="#FFD93D" name="Red Light Jump" strokeWidth={2} />
+                    <Line type="monotone" dataKey="overspeeding" stroke="#A855F7" name="Overspeeding" strokeWidth={2} />
+                  </LineChart>
+                </ResponsiveContainer>
+              </CardContent>
+            </Card>
+
+            {/* Congestion Patterns Chart */}
+            <Card className="shadow-xl">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-primary mb-4">Daily Congestion Patterns</h3>
+                <p className="text-sm text-gray-600 mb-6">
+                  Average congestion levels throughout the day
+                </p>
+                <ResponsiveContainer width="100%" height={300}>
+                  <BarChart data={congestionData}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="time" />
+                    <YAxis label={{ value: 'Congestion %', angle: -90, position: 'insideLeft' }} />
+                    <Tooltip />
+                    <Bar dataKey="level" fill="#8B5CF6" name="Congestion Level" />
+                  </BarChart>
+                </ResponsiveContainer>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits */}
+      <section className="py-10 md:py-12 bg-gray-50">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8 animate-fade-in">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                <span className="gradient-text">Benefits</span>
+                <span className="gradient-text">Key Benefits</span>
               </h2>
             </div>
 
