@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Leaf, Camera, AlertTriangle, CloudRain, BarChart, Smartphone } from "lucide-react";
+import agriSightMobile from "@/assets/products/agrisight-mobile.jpg";
 
 const AgriSight = () => {
   const features = [
@@ -94,6 +95,22 @@ const AgriSight = () => {
             </div>
             <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg p-8 flex items-center justify-center">
               <Leaf className="text-primary" size={200} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Screenshots */}
+      <section className="py-12 md:py-16 bg-gray-50">
+        <div className="container-custom">
+          <h2 className="text-3xl font-bold text-center mb-12">Mobile App Experience</h2>
+          <div className="max-w-md mx-auto">
+            <div className="overflow-hidden rounded-lg shadow-lg">
+              <img src={agriSightMobile} alt="AgriSight Mobile App" className="w-full h-full object-cover" />
+              <div className="bg-white p-6">
+                <h3 className="font-semibold text-lg mb-2">AI Crop Disease Detection</h3>
+                <p className="text-gray-600">Snap a photo to get instant disease diagnosis and treatment recommendations</p>
+              </div>
             </div>
           </div>
         </div>

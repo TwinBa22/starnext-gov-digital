@@ -1,6 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Bot, Workflow, MessageSquare, FileText, Zap, Shield } from "lucide-react";
+import aiGovernanceChatbot from "@/assets/products/ai-governance-chatbot.jpg";
+import aiGovernanceWhatsApp from "@/assets/products/ai-governance-whatsapp.jpg";
 
 const AIGovernance = () => {
   const features = [
@@ -94,6 +96,29 @@ const AIGovernance = () => {
             </div>
             <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg p-8 flex items-center justify-center">
               <Bot className="text-primary" size={200} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Screenshots */}
+      <section className="py-12 md:py-16 bg-gray-50">
+        <div className="container-custom">
+          <h2 className="text-3xl font-bold text-center mb-12">AI-Powered Interfaces</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="overflow-hidden rounded-lg shadow-lg">
+              <img src={aiGovernanceChatbot} alt="AI Governance Chatbot Interface" className="w-full h-full object-cover" />
+              <div className="bg-white p-4">
+                <h3 className="font-semibold text-lg">AI Chatbot Dashboard</h3>
+                <p className="text-gray-600 text-sm">Intelligent grievance routing and resolution system</p>
+              </div>
+            </div>
+            <div className="overflow-hidden rounded-lg shadow-lg">
+              <img src={aiGovernanceWhatsApp} alt="WhatsApp Integration" className="w-full h-full object-cover" />
+              <div className="bg-white p-4">
+                <h3 className="font-semibold text-lg">WhatsApp Integration</h3>
+                <p className="text-gray-600 text-sm">Citizens can file complaints via WhatsApp</p>
+              </div>
             </div>
           </div>
         </div>

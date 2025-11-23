@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Satellite, Map, Layers, Camera, BarChart, Globe } from "lucide-react";
+import geoVisionPlatformInterface from "@/assets/products/geovision-platform-interface.jpg";
 
 const GeoVisionPlatform = () => {
   const features = [
@@ -94,6 +95,22 @@ const GeoVisionPlatform = () => {
             </div>
             <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg p-8 flex items-center justify-center">
               <Satellite className="text-primary" size={200} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Screenshots */}
+      <section className="py-12 md:py-16 bg-gray-50">
+        <div className="container-custom">
+          <h2 className="text-3xl font-bold text-center mb-12">Platform Interface</h2>
+          <div className="max-w-5xl mx-auto">
+            <div className="overflow-hidden rounded-lg shadow-lg">
+              <img src={geoVisionPlatformInterface} alt="GeoVision Platform Interface" className="w-full h-full object-cover" />
+              <div className="bg-white p-6">
+                <h3 className="font-semibold text-lg mb-2">Advanced Geospatial Analysis</h3>
+                <p className="text-gray-600">Satellite imagery layers, change detection, and spectral analysis tools</p>
+              </div>
             </div>
           </div>
         </div>
