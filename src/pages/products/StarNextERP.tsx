@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Factory, Package, DollarSign, Users, BarChart, Settings } from "lucide-react";
 import starNextDashboard from "@/assets/products/starnext-erp-dashboard.jpg";
+import ProductDemoForm from "@/components/ProductDemoForm";
 
 const StarNextERP = () => {
   const features = [
@@ -152,6 +153,13 @@ const StarNextERP = () => {
               </CardContent>
             </Card>
           </div>
+        </div>
+      </section>
+
+      {/* Demo Request Form */}
+      <section className="py-12 md:py-16">
+        <div className="container-custom">
+          <ProductDemoForm productName="StarNext ERP - Manufacturing ERP Solution" />
         </div>
       </section>
 

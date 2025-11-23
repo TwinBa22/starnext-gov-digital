@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Cpu, Zap, Shield, BarChart, Camera, Cloud } from "lucide-react";
 import edgeSenseDashboard from "@/assets/products/edgesense-dashboard.jpg";
 import edgeSenseMobile from "@/assets/products/edgesense-mobile.jpg";
+import ProductDemoForm from "@/components/ProductDemoForm";
 
 const EdgeSense = () => {
   const features = [
@@ -152,6 +153,13 @@ const EdgeSense = () => {
               </CardContent>
             </Card>
           </div>
+        </div>
+      </section>
+
+      {/* Demo Request Form */}
+      <section className="py-12 md:py-16">
+        <div className="container-custom">
+          <ProductDemoForm productName="EdgeSense - Edge AI Analytics Device" />
         </div>
       </section>
 

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Building2, Users, FileText, Bell, BarChart3, Globe } from "lucide-react";
 import ecivicDashboard from "@/assets/products/ecivic-dashboard.jpg";
 import ecivicCitizenPortal from "@/assets/products/ecivic-citizen-portal.jpg";
+import ProductDemoForm from "@/components/ProductDemoForm";
 
 const ECivic = () => {
   const features = [
@@ -160,6 +161,13 @@ const ECivic = () => {
               </CardContent>
             </Card>
           </div>
+        </div>
+      </section>
+
+      {/* Demo Request Form */}
+      <section className="py-12 md:py-16">
+        <div className="container-custom">
+          <ProductDemoForm productName="eCivic - Unified City Governance Suite" />
         </div>
       </section>
 

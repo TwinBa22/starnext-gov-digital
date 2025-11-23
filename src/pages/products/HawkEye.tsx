@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Monitor, Eye, Shield, Clock, FileText, AlertTriangle } from "lucide-react";
 import hawkEyeDashboard from "@/assets/products/hawkeye-dashboard.jpg";
+import ProductDemoForm from "@/components/ProductDemoForm";
 
 const HawkEye = () => {
   const features = [
@@ -152,6 +153,13 @@ const HawkEye = () => {
               </CardContent>
             </Card>
           </div>
+        </div>
+      </section>
+
+      {/* Demo Request Form */}
+      <section className="py-12 md:py-16">
+        <div className="container-custom">
+          <ProductDemoForm productName="HawkEye - Device & Employee Monitoring" />
         </div>
       </section>
 

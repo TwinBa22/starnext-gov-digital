@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Smartphone, Users, Bell, MapPin, TrendingUp, CheckCircle } from "lucide-react";
 import productImage from "@/assets/products/governance-ai-hero.jpg";
+import ProductDemoForm from "@/components/ProductDemoForm";
 
 const PalakMantri = () => {
   const features = [
@@ -229,6 +230,13 @@ const PalakMantri = () => {
               </CardContent>
             </Card>
           </div>
+        </div>
+      </section>
+
+      {/* Demo Request Form */}
+      <section className="py-12 md:py-16">
+        <div className="container-custom">
+          <ProductDemoForm productName="PalakMantri APP - Minister Outreach Platform" />
         </div>
       </section>
 

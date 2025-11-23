@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Brain, Workflow, FileSearch, MessageSquare, Zap, Code } from "lucide-react";
 import enterpriseAIAutomation from "@/assets/products/enterprise-ai-automation.jpg";
+import ProductDemoForm from "@/components/ProductDemoForm";
 
 const EnterpriseAI = () => {
   const features = [
@@ -152,6 +153,13 @@ const EnterpriseAI = () => {
               </CardContent>
             </Card>
           </div>
+        </div>
+      </section>
+
+      {/* Demo Request Form */}
+      <section className="py-12 md:py-16">
+        <div className="container-custom">
+          <ProductDemoForm productName="Enterprise AI Automation Suite" />
         </div>
       </section>
 

@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Heart, MapPin, Thermometer, Bell, BarChart, Smartphone } from "lucide-react";
 import livestockDashboard from "@/assets/products/livestock-dashboard.jpg";
+import ProductDemoForm from "@/components/ProductDemoForm";
 
 const LivestockMonitoring = () => {
   const features = [
@@ -152,6 +153,13 @@ const LivestockMonitoring = () => {
               </CardContent>
             </Card>
           </div>
+        </div>
+      </section>
+
+      {/* Demo Request Form */}
+      <section className="py-12 md:py-16">
+        <div className="container-custom">
+          <ProductDemoForm productName="Livestock IoT & AI Monitoring Suite" />
         </div>
       </section>
 

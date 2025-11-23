@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Satellite, AlertTriangle, Map, Camera, FileCheck, Brain } from "lucide-react";
 import geoVisionDetection from "@/assets/products/geovision-construction-detection.jpg";
+import ProductDemoForm from "@/components/ProductDemoForm";
 
 const GeoVisionConstruction = () => {
   const features = [
@@ -152,6 +153,13 @@ const GeoVisionConstruction = () => {
               </CardContent>
             </Card>
           </div>
+        </div>
+      </section>
+
+      {/* Demo Request Form */}
+      <section className="py-12 md:py-16">
+        <div className="container-custom">
+          <ProductDemoForm productName="GeoVision - Unauthorized Construction Detection" />
         </div>
       </section>
 

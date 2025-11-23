@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowLeft, AlertCircle, MapPin, Radio, Users, Cloud, Phone } from "lucide-react";
 import emsCommandCenter from "@/assets/products/ems-command-center.jpg";
+import ProductDemoForm from "@/components/ProductDemoForm";
 
 const EMS = () => {
   const features = [
@@ -152,6 +153,13 @@ const EMS = () => {
               </CardContent>
             </Card>
           </div>
+        </div>
+      </section>
+
+      {/* Demo Request Form */}
+      <section className="py-12 md:py-16">
+        <div className="container-custom">
+          <ProductDemoForm productName="Emergency Management System (EMS)" />
         </div>
       </section>
 
