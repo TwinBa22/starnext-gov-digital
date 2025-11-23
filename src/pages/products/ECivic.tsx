@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Building2, Users, FileText, Bell, BarChart3, Globe } from "lucide-react";
 import ecivicDashboard from "@/assets/products/ecivic-dashboard.jpg";
 import ecivicCitizenPortal from "@/assets/products/ecivic-citizen-portal.jpg";
+import ecivicPlatform from "@/assets/products/ecivic-platform.jpg";
 import ProductDemoForm from "@/components/ProductDemoForm";
 
 const ECivic = () => {
@@ -51,7 +52,7 @@ const ECivic = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="section-padding hero-gradient text-white relative overflow-hidden">
+      <section className="py-12 md:py-16 hero-gradient text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
@@ -80,7 +81,7 @@ const ECivic = () => {
       </section>
 
       {/* Product Overview */}
-      <section className="py-12 md:py-16">
+      <section className="py-10 md:py-12">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
@@ -95,17 +96,17 @@ const ECivic = () => {
                 Built with scalability in mind, eCivic serves cities of all sizes, from small municipalities to large metropolitan areas, with customizable modules and workflows.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg p-8 flex items-center justify-center">
-              <Building2 className="text-primary" size={200} />
+            <div className="overflow-hidden rounded-lg shadow-lg">
+              <img src={ecivicPlatform} alt="eCivic City Management Platform" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
       </section>
 
       {/* Product Screenshots */}
-      <section className="py-12 md:py-16 bg-gray-50">
+      <section className="py-10 md:py-12 bg-gray-50">
         <div className="container-custom">
-          <h2 className="text-3xl font-bold text-center mb-12">Platform Interfaces</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">Platform Interfaces</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="overflow-hidden rounded-lg shadow-lg">
               <img src={ecivicDashboard} alt="eCivic Dashboard" className="w-full h-full object-cover" />
@@ -126,9 +127,9 @@ const ECivic = () => {
       </section>
 
       {/* Key Features */}
-      <section className="py-12 md:py-16 bg-gray-50">
+      <section className="py-10 md:py-12 bg-gray-50">
         <div className="container-custom">
-          <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">Key Features</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (
               <Card key={index} className="card-hover">
@@ -144,7 +145,7 @@ const ECivic = () => {
       </section>
 
       {/* Benefits */}
-      <section className="py-12 md:py-16">
+      <section className="py-10 md:py-12">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-8">Benefits</h2>
@@ -165,14 +166,14 @@ const ECivic = () => {
       </section>
 
       {/* Demo Request Form */}
-      <section className="py-12 md:py-16">
+      <section className="py-10 md:py-12">
         <div className="container-custom">
           <ProductDemoForm productName="eCivic - Unified City Governance Suite" />
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding hero-gradient text-white relative overflow-hidden">
+      <section className="py-12 md:py-16 hero-gradient text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-white rounded-full blur-3xl"></div>
         </div>
