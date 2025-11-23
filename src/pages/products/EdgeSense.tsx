@@ -1,8 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Cpu, Zap, Shield, BarChart, Camera, Cloud } from "lucide-react";
-import edgeSenseDashboard from "@/assets/products/edgesense-dashboard.jpg";
-import edgeSenseMobile from "@/assets/products/edgesense-mobile.jpg";
+import edgeSenseAiComponent from "@/assets/products/edgesense-ai-component.jpg";
 import ProductDemoForm from "@/components/ProductDemoForm";
 
 const EdgeSense = () => {
@@ -51,7 +50,7 @@ const EdgeSense = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="section-padding hero-gradient text-white relative overflow-hidden">
+      <section className="py-12 md:py-16 hero-gradient text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
@@ -80,7 +79,7 @@ const EdgeSense = () => {
       </section>
 
       {/* Product Overview */}
-      <section className="py-12 md:py-16">
+      <section className="py-10 md:py-12">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
@@ -95,32 +94,17 @@ const EdgeSense = () => {
                 Perfect for smart cities, retail analytics, industrial monitoring, security applications, and any scenario requiring real-time AI processing with privacy and low latency.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg p-8 flex items-center justify-center">
-              <Cpu className="text-primary" size={200} />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Product Screenshots */}
-      <section className="py-12 md:py-16 bg-gray-50">
-        <div className="container-custom">
-          <h2 className="text-3xl font-bold text-center mb-12">See It In Action</h2>
-          <div className="grid md:grid-cols-2 gap-8">
             <div className="overflow-hidden rounded-lg shadow-lg">
-              <img src={edgeSenseDashboard} alt="EdgeSense Dashboard Interface" className="w-full h-full object-cover" />
-            </div>
-            <div className="overflow-hidden rounded-lg shadow-lg">
-              <img src={edgeSenseMobile} alt="EdgeSense Mobile App" className="w-full h-full object-cover" />
+              <img src={edgeSenseAiComponent} alt="EdgeSense AI Component" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
       </section>
 
       {/* Key Features */}
-      <section className="py-12 md:py-16 bg-gray-50">
+      <section className="py-10 md:py-12 bg-gray-50">
         <div className="container-custom">
-          <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">Key Features</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (
               <Card key={index} className="card-hover">
@@ -136,7 +120,7 @@ const EdgeSense = () => {
       </section>
 
       {/* Benefits */}
-      <section className="py-12 md:py-16">
+      <section className="py-10 md:py-12">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-8">Benefits</h2>
@@ -157,14 +141,14 @@ const EdgeSense = () => {
       </section>
 
       {/* Demo Request Form */}
-      <section className="py-12 md:py-16">
+      <section className="py-10 md:py-12">
         <div className="container-custom">
           <ProductDemoForm productName="EdgeSense - Edge AI Analytics Device" />
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding hero-gradient text-white relative overflow-hidden">
+      <section className="py-12 md:py-16 hero-gradient text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-white rounded-full blur-3xl"></div>
         </div>
