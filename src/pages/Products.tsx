@@ -1,10 +1,14 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowRight, MapPin, Cloud, Sprout, Heart, Bot, Factory, Monitor, Satellite } from "lucide-react";
-import smartCityImage from "@/assets/products/smart-city.jpg";
-import disasterAgriImage from "@/assets/products/disaster-agriculture.jpg";
-import livestockImage from "@/assets/products/livestock-governance.jpg";
-import workforceImage from "@/assets/products/workforce-geospatial.jpg";
+import smartCityImage from "@/assets/products/smart-city-hero.jpg";
+import governanceImage from "@/assets/products/governance-ai-hero.jpg";
+import manufacturingImage from "@/assets/products/manufacturing-hero.jpg";
+import agricultureImage from "@/assets/products/agriculture-drone-hero.jpg";
+import disasterImage from "@/assets/products/disaster-response-hero.jpg";
+import livestockImage from "@/assets/products/livestock-iot-hero.jpg";
+import workforceImage from "@/assets/products/workforce-monitoring-hero.jpg";
+import geospatialImage from "@/assets/products/geospatial-hero.jpg";
 
 const Products = () => {
   const productCategories = [
@@ -22,13 +26,25 @@ const Products = () => {
       ]
     },
     {
-      id: "disaster",
-      icon: Cloud,
-      title: "Disaster & Emergency Response",
-      description: "Statewide disaster command and control with impact-based forecasting",
-      image: disasterAgriImage,
+      id: "governance",
+      icon: Bot,
+      title: "Governance Automation & AI",
+      description: "Agentic AI for grievance routing, WhatsApp services, and auto-documentation",
+      image: governanceImage,
       products: [
-        { name: "Emergency Management System (EMS)", slug: "ems" },
+        { name: "Agentic AI Governance Platform", slug: "ai-governance" },
+        { name: "PalakMantri APP – Minister Outreach Platform", slug: "palakmantri" },
+      ]
+    },
+    {
+      id: "manufacturing",
+      icon: Factory,
+      title: "Manufacturing, Industry & Enterprise",
+      description: "Complete ERP solutions and enterprise AI automation",
+      image: manufacturingImage,
+      products: [
+        { name: "StarNext ERP (Manufacturing ERP)", slug: "starnext-erp" },
+        { name: "Enterprise AI Automation Suite", slug: "enterprise-ai" },
       ]
     },
     {
@@ -36,10 +52,20 @@ const Products = () => {
       icon: Sprout,
       title: "Agriculture, Drone & Rural Development",
       description: "Drone-based agriculture, crop health monitoring, and AI disease detection",
-      image: disasterAgriImage,
+      image: agricultureImage,
       products: [
         { name: "Drone Agriculture Platform", slug: "drone-agriculture" },
         { name: "AgriSight AI Platform", slug: "agrisight" },
+      ]
+    },
+    {
+      id: "disaster",
+      icon: Cloud,
+      title: "Disaster & Emergency Response",
+      description: "Statewide disaster command and control with impact-based forecasting",
+      image: disasterImage,
+      products: [
+        { name: "Emergency Management System (EMS)", slug: "ems" },
       ]
     },
     {
@@ -50,27 +76,6 @@ const Products = () => {
       image: livestockImage,
       products: [
         { name: "Livestock IoT & AI Monitoring Suite", slug: "livestock-monitoring" },
-      ]
-    },
-    {
-      id: "governance",
-      icon: Bot,
-      title: "Governance Automation & AI",
-      description: "Agentic AI for grievance routing, WhatsApp services, and auto-documentation",
-      image: livestockImage,
-      products: [
-        { name: "Agentic AI Governance Platform", slug: "ai-governance" },
-      ]
-    },
-    {
-      id: "manufacturing",
-      icon: Factory,
-      title: "Manufacturing, Industry & Enterprise",
-      description: "Complete ERP solutions and enterprise AI automation",
-      image: livestockImage,
-      products: [
-        { name: "StarNext ERP (Manufacturing ERP)", slug: "starnext-erp" },
-        { name: "Enterprise AI Automation Suite", slug: "enterprise-ai" },
       ]
     },
     {
@@ -88,7 +93,7 @@ const Products = () => {
       icon: Satellite,
       title: "Geospatial & Remote Sensing",
       description: "Satellite imagery, change detection, and disaster mapping",
-      image: workforceImage,
+      image: geospatialImage,
       products: [
         { name: "GeoVision Platform", slug: "geovision-platform" },
       ]

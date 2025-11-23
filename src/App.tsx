@@ -15,6 +15,7 @@ import CaseStudies from "./pages/CaseStudies";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import SmartTraffic from "./pages/products/SmartTraffic";
+import PalakMantri from "./pages/products/PalakMantri";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/smart-traffic" element={<SmartTraffic />} />
+          <Route path="/products/palakmantri" element={<PalakMantri />} />
           <Route path="/services" element={<Services />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/contact" element={<Contact />} />
