@@ -307,8 +307,132 @@ const About = () => {
         </div>
       </section>
 
-      {/* Timeline */}
+      {/* Manpower Strength */}
       <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <span className="gradient-text">Our Manpower Strength</span>
+            </h2>
+            <p className="text-lg text-gray-600 mb-2">Total Strength: 190+ Professionals</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <Card className="shadow-lg card-hover animate-fade-in">
+              <CardContent className="p-6">
+                <div className="text-3xl font-bold text-primary mb-2">25+</div>
+                <h3 className="text-lg font-bold text-primary mb-3">Software Development</h3>
+                <ul className="space-y-1 text-sm text-gray-600">
+                  <li>• Full-stack Engineers</li>
+                  <li>• Backend/API Engineers</li>
+                  <li>• Mobile Developers</li>
+                  <li>• Cloud Engineers</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-lg card-hover animate-fade-in" style={{ animationDelay: "0.05s" }}>
+              <CardContent className="p-6">
+                <div className="text-3xl font-bold text-primary mb-2">10+</div>
+                <h3 className="text-lg font-bold text-primary mb-3">AI, Data Science & CV Engineers</h3>
+                <ul className="space-y-1 text-sm text-gray-600">
+                  <li>• Computer Vision</li>
+                  <li>• NLP/LLMs</li>
+                  <li>• Predictive Analytics</li>
+                  <li>• GIS AI Models</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-lg card-hover animate-fade-in" style={{ animationDelay: "0.1s" }}>
+              <CardContent className="p-6">
+                <div className="text-3xl font-bold text-primary mb-2">10+</div>
+                <h3 className="text-lg font-bold text-primary mb-3">Quality Assurance</h3>
+                <ul className="space-y-1 text-sm text-gray-600">
+                  <li>• Test Script Automation</li>
+                  <li>• UAT Teams</li>
+                  <li>• Performance Testing</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-lg card-hover animate-fade-in" style={{ animationDelay: "0.15s" }}>
+              <CardContent className="p-6">
+                <div className="text-3xl font-bold text-primary mb-2">10+</div>
+                <h3 className="text-lg font-bold text-primary mb-3">Project Management</h3>
+                <ul className="space-y-1 text-sm text-gray-600">
+                  <li>• PM/Delivery Managers</li>
+                  <li>• PMU Professionals</li>
+                  <li>• Government Coordination</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-lg card-hover animate-fade-in" style={{ animationDelay: "0.2s" }}>
+              <CardContent className="p-6">
+                <div className="text-3xl font-bold text-primary mb-2">10+</div>
+                <h3 className="text-lg font-bold text-primary mb-3">Infrastructure & DevOps</h3>
+                <ul className="space-y-1 text-sm text-gray-600">
+                  <li>• DC/DR</li>
+                  <li>• Cloud DevOps</li>
+                  <li>• Network & Security</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-lg card-hover animate-fade-in" style={{ animationDelay: "0.25s" }}>
+              <CardContent className="p-6">
+                <div className="text-3xl font-bold text-primary mb-2">60+</div>
+                <h3 className="text-lg font-bold text-primary mb-3">Digitization & DMS Ops</h3>
+                <ul className="space-y-1 text-sm text-gray-600">
+                  <li>• Scanning Teams</li>
+                  <li>• Indexing & Metadata</li>
+                  <li>• QA Teams</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-lg card-hover animate-fade-in" style={{ animationDelay: "0.3s" }}>
+              <CardContent className="p-6">
+                <div className="text-3xl font-bold text-primary mb-2">30+</div>
+                <h3 className="text-lg font-bold text-primary mb-3">Field Deployment & Support</h3>
+                <ul className="space-y-1 text-sm text-gray-600">
+                  <li>• On-site Engineers</li>
+                  <li>• Network Teams</li>
+                  <li>• Hardware Installation</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-lg card-hover animate-fade-in" style={{ animationDelay: "0.35s" }}>
+              <CardContent className="p-6">
+                <div className="text-3xl font-bold text-primary mb-2">25+</div>
+                <h3 className="text-lg font-bold text-primary mb-3">Helpdesk & Support</h3>
+                <ul className="space-y-1 text-sm text-gray-600">
+                  <li>• 24/7 L1/L2 Support</li>
+                  <li>• Ticket Resolution</li>
+                  <li>• Remote & Field Support</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-lg card-hover animate-fade-in" style={{ animationDelay: "0.4s" }}>
+              <CardContent className="p-6">
+                <div className="text-3xl font-bold text-primary mb-2">10+</div>
+                <h3 className="text-lg font-bold text-primary mb-3">Administration, Finance & HR</h3>
+                <ul className="space-y-1 text-sm text-gray-600">
+                  <li>• Financial Management</li>
+                  <li>• Human Resources</li>
+                  <li>• Administrative Support</li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Timeline */}
+      <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
