@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Satellite, AlertTriangle, Map, Camera, FileCheck, Brain } from "lucide-react";
-import geoVisionDetection from "@/assets/products/geovision-construction-detection.jpg";
+import geoVisionUrbanMonitoring from "@/assets/products/geovision-urban-monitoring.jpg";
 import ProductDemoForm from "@/components/ProductDemoForm";
 
 const GeoVisionConstruction = () => {
@@ -50,7 +50,7 @@ const GeoVisionConstruction = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="section-padding hero-gradient text-white relative overflow-hidden">
+      <section className="py-12 md:py-16 hero-gradient text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
@@ -79,7 +79,7 @@ const GeoVisionConstruction = () => {
       </section>
 
       {/* Product Overview */}
-      <section className="py-12 md:py-16">
+      <section className="py-10 md:py-12">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
@@ -94,33 +94,17 @@ const GeoVisionConstruction = () => {
                 Perfect for municipal corporations, urban development authorities, and environmental agencies seeking to enforce compliance and maintain orderly urban growth.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg p-8 flex items-center justify-center">
-              <Satellite className="text-primary" size={200} />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Product Screenshots */}
-      <section className="py-12 md:py-16 bg-gray-50">
-        <div className="container-custom">
-          <h2 className="text-3xl font-bold text-center mb-12">Detection In Action</h2>
-          <div className="max-w-5xl mx-auto">
             <div className="overflow-hidden rounded-lg shadow-lg">
-              <img src={geoVisionDetection} alt="GeoVision Construction Detection Interface" className="w-full h-full object-cover" />
-              <div className="bg-white p-6">
-                <h3 className="font-semibold text-lg mb-2">Satellite-Based Construction Detection</h3>
-                <p className="text-gray-600">AI-powered analysis of satellite imagery showing before/after comparison with highlighted unauthorized construction areas</p>
-              </div>
+              <img src={geoVisionUrbanMonitoring} alt="GeoVision Urban Compliance Monitoring" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
       </section>
 
       {/* Key Features */}
-      <section className="py-12 md:py-16 bg-gray-50">
+      <section className="py-10 md:py-12 bg-gray-50">
         <div className="container-custom">
-          <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">Key Features</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (
               <Card key={index} className="card-hover">
@@ -136,7 +120,7 @@ const GeoVisionConstruction = () => {
       </section>
 
       {/* Benefits */}
-      <section className="py-12 md:py-16">
+      <section className="py-10 md:py-12">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-8">Benefits</h2>
@@ -157,14 +141,14 @@ const GeoVisionConstruction = () => {
       </section>
 
       {/* Demo Request Form */}
-      <section className="py-12 md:py-16">
+      <section className="py-10 md:py-12">
         <div className="container-custom">
           <ProductDemoForm productName="GeoVision - Unauthorized Construction Detection" />
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding hero-gradient text-white relative overflow-hidden">
+      <section className="py-12 md:py-16 hero-gradient text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-white rounded-full blur-3xl"></div>
         </div>
