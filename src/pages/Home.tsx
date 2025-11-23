@@ -132,42 +132,42 @@ const Home = () => {
       </section>
       {/* Capabilities Section */}
       <section className="py-12 md:py-16 bg-gray-50">
-        <div className="container-custom">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="container-custom px-4">
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
               Our <span className="gradient-text">Capabilities</span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
               Comprehensive technology solutions tailored for government and enterprise digital transformation
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {capabilities.map((capability, index) => (
-              <Card key={index} className="card-hover border-0 shadow-md animate-scale-in overflow-hidden" style={{ animationDelay: `${index * 0.1}s` }}>
+              <Card key={index} className="card-hover border-0 shadow-md animate-scale-in overflow-hidden h-full" style={{ animationDelay: `${index * 0.1}s` }}>
                 <CardContent className="p-0">
-                  <div className="h-48 overflow-hidden">
+                  <div className="h-40 md:h-48 overflow-hidden">
                     <img 
                       src={index === 0 ? datacenterImg : index === 1 ? cloudImg : index === 2 ? softwareImg : index === 3 ? cybersecurityImg : index === 4 ? infrastructureImg : digitizationImg} 
                       alt={capability.title}
                       className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                     />
                   </div>
-                  <div className="p-6">
-                    <div className="w-14 h-14 rounded-lg hero-gradient opacity-80 flex items-center justify-center mb-4 -mt-14 relative shadow-lg">
-                      <capability.icon className="text-white" size={28} />
+                  <div className="p-5 md:p-6">
+                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg hero-gradient opacity-80 flex items-center justify-center mb-4 -mt-10 md:-mt-14 relative shadow-lg">
+                      <capability.icon className="text-white" size={24} />
                     </div>
-                    <h3 className="text-xl font-semibold mb-2 text-primary">
+                    <h3 className="text-lg md:text-xl font-semibold mb-2 text-primary">
                       {capability.title}
                     </h3>
-                    <p className="text-muted-foreground">{capability.description}</p>
+                    <p className="text-sm md:text-base text-muted-foreground">{capability.description}</p>
                   </div>
                 </CardContent>
               </Card>
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-10 md:mt-12">
             <Link to="/services">
               <Button size="lg" className="btn-primary">
                 View All Services <ArrowRight className="ml-2" size={20} />
@@ -178,25 +178,25 @@ const Home = () => {
       </section>
 
       {/* Government Clients Section */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      <section className="py-12 md:py-16 bg-white">
+        <div className="container-custom px-4">
+          <div className="text-center mb-10 md:mb-12 animate-fade-in">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
               Trusted by <span className="gradient-text">Government Departments</span>
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-base md:text-lg text-gray-600">
               Serving public sector organizations across India
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-4xl mx-auto">
             {clients.map((client, index) => (
               <Card key={index} className="border-2 border-border hover:border-secondary transition-all duration-300 animate-fade-in group" style={{ animationDelay: `${index * 0.1}s` }}>
-                <CardContent className="p-6 flex items-center space-x-4">
-                  <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center group-hover:bg-secondary/10 transition-colors">
-                    <Building2 className="text-secondary flex-shrink-0" size={32} />
+                <CardContent className="p-5 md:p-6 flex items-center space-x-3 md:space-x-4">
+                  <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-muted flex items-center justify-center group-hover:bg-secondary/10 transition-colors flex-shrink-0">
+                    <Building2 className="text-secondary" size={28} />
                   </div>
-                  <span className="font-medium text-primary">{client}</span>
+                  <span className="text-sm md:text-base font-medium text-primary">{client}</span>
                 </CardContent>
               </Card>
             ))}
@@ -205,22 +205,22 @@ const Home = () => {
       </section>
 
       {/* Case Studies Preview */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      <section className="py-12 md:py-16 bg-gray-50">
+        <div className="container-custom px-4">
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
               Featured <span className="gradient-text">Case Studies</span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
               Real-world impact through innovative government technology solutions
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {caseStudies.map((study, index) => (
-              <Card key={index} className="card-hover shadow-lg animate-scale-in overflow-hidden" style={{ animationDelay: `${index * 0.1}s` }}>
+              <Card key={index} className="card-hover shadow-lg animate-scale-in overflow-hidden h-full" style={{ animationDelay: `${index * 0.1}s` }}>
                 <CardContent className="p-0">
-                  <div className="h-48 overflow-hidden relative">
+                  <div className="h-40 md:h-48 overflow-hidden relative">
                     <img 
                       src={index === 0 ? datacenterImg : index === 1 ? govBuildingImg : tasmacImg} 
                       alt={study.title}
@@ -228,19 +228,19 @@ const Home = () => {
                     />
                     <div className="absolute inset-0 hero-gradient opacity-40" />
                   </div>
-                  <div className="p-6">
-                    <div className="flex items-center space-x-2 mb-4">
-                      <Award className="text-secondary" size={24} />
-                      <span className="text-sm font-semibold text-secondary">
+                  <div className="p-5 md:p-6">
+                    <div className="flex items-center space-x-2 mb-3 md:mb-4">
+                      <Award className="text-secondary" size={20} />
+                      <span className="text-xs md:text-sm font-semibold text-secondary">
                         {study.client}
                       </span>
                     </div>
-                    <h3 className="text-xl font-bold mb-2 text-primary">
+                    <h3 className="text-lg md:text-xl font-bold mb-2 text-primary">
                       {study.title}
                     </h3>
-                    <p className="text-muted-foreground mb-4">{study.description}</p>
-                    <div className="flex items-center space-x-2 text-sm font-semibold text-primary">
-                      <TrendingUp size={18} className="text-secondary" />
+                    <p className="text-sm md:text-base text-muted-foreground mb-4">{study.description}</p>
+                    <div className="flex items-center space-x-2 text-xs md:text-sm font-semibold text-primary">
+                      <TrendingUp size={16} className="text-secondary" />
                       <span>{study.impact}</span>
                     </div>
                   </div>
@@ -249,7 +249,7 @@ const Home = () => {
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-10 md:mt-12">
             <Link to="/case-studies">
               <Button size="lg" className="btn-secondary">
                 View All Case Studies <ArrowRight className="ml-2" size={20} />
@@ -260,7 +260,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative section-padding text-white overflow-hidden">
+      <section className="relative py-16 md:py-20 text-white overflow-hidden">
         <div 
           className="absolute inset-0 z-0"
           style={{
@@ -270,15 +270,15 @@ const Home = () => {
           }}
         />
         <div className="absolute inset-0 hero-gradient opacity-95 z-10" />
-        <div className="relative z-20 container-custom text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+        <div className="relative z-20 container-custom text-center px-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">
             Ready to Transform Your Digital Infrastructure?
           </h2>
-          <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl mb-6 md:mb-8 text-white/90 max-w-2xl mx-auto">
             Partner with us for secure, scalable, and innovative technology solutions
           </p>
           <Link to="/contact">
-            <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 shadow-lg hover:shadow-xl transition-all">
+            <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-base md:text-lg px-6 md:px-8 shadow-lg hover:shadow-xl transition-all">
               Get Started Today
             </Button>
           </Link>

@@ -122,22 +122,22 @@ const CaseStudies = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="section-padding hero-gradient text-white relative overflow-hidden">
+      <section className="py-16 md:py-20 hero-gradient text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
         </div>
-        <div className="container-custom text-center animate-fade-in relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Case Studies</h1>
-          <p className="text-xl max-w-3xl mx-auto text-white/90">
+        <div className="container-custom text-center animate-fade-in relative z-10 px-4">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">Case Studies</h1>
+          <p className="text-lg md:text-xl max-w-3xl mx-auto text-white/90">
             Real-world impact through innovative government technology solutions
           </p>
         </div>
       </section>
 
       {/* Breadcrumb */}
-      <section className="bg-gray-100 py-4">
-        <div className="container-custom">
+      <section className="bg-gray-100 py-3">
+        <div className="container-custom px-4">
           <div className="text-sm text-gray-600">
             <span>Home</span> <span className="mx-2">/</span>
             <span className="text-primary font-semibold">Case Studies</span>
@@ -153,91 +153,91 @@ const CaseStudies = () => {
             index % 2 === 0 ? "bg-white" : "bg-gray-50"
           }`}
         >
-          <div className="container-custom">
+          <div className="container-custom px-4">
             <div className="max-w-6xl mx-auto">
               {/* Header */}
-              <div className="mb-12 animate-fade-in">
+              <div className="mb-10 md:mb-12 animate-fade-in">
                 <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-16 h-16 rounded-xl hero-gradient flex items-center justify-center">
-                    <study.icon className="text-white" size={32} />
+                  <div className="w-14 h-14 md:w-16 md:h-16 rounded-xl hero-gradient flex items-center justify-center flex-shrink-0">
+                    <study.icon className="text-white" size={28} />
                   </div>
                   <div>
-                    <span className="text-sm font-semibold text-secondary uppercase tracking-wide">
+                    <span className="text-xs md:text-sm font-semibold text-secondary uppercase tracking-wide">
                       {study.category}
                     </span>
-                    <h2 className="text-3xl md:text-4xl font-bold text-primary">
+                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary">
                       {study.title}
                     </h2>
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 mt-6">
                   <div className="flex items-center space-x-2 text-gray-600">
-                    <Building2 size={18} className="text-secondary" />
-                    <span className="text-sm">{study.client}</span>
+                    <Building2 size={16} className="text-secondary flex-shrink-0" />
+                    <span className="text-xs md:text-sm">{study.client}</span>
                   </div>
                   <div className="flex items-center space-x-2 text-gray-600">
-                    <MapPin size={18} className="text-secondary" />
-                    <span className="text-sm">{study.location}</span>
+                    <MapPin size={16} className="text-secondary flex-shrink-0" />
+                    <span className="text-xs md:text-sm">{study.location}</span>
                   </div>
                   <div className="flex items-center space-x-2 text-gray-600">
-                    <Calendar size={18} className="text-secondary" />
-                    <span className="text-sm">{study.duration}</span>
+                    <Calendar size={16} className="text-secondary flex-shrink-0" />
+                    <span className="text-xs md:text-sm">{study.duration}</span>
                   </div>
                 </div>
               </div>
 
               {/* Metrics */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-10 md:mb-12">
                 {study.metrics.map((metric, idx) => (
                   <Card
                     key={idx}
                     className="text-center shadow-lg card-hover animate-scale-in"
                     style={{ animationDelay: `${idx * 0.1}s` }}
                   >
-                    <CardContent className="p-6">
-                      <div className="text-3xl font-bold gradient-text mb-2">
+                    <CardContent className="p-4 md:p-6">
+                      <div className="text-2xl md:text-3xl font-bold gradient-text mb-2">
                         {metric.value}
                       </div>
-                      <div className="text-sm text-gray-600">{metric.label}</div>
+                      <div className="text-xs md:text-sm text-gray-600">{metric.label}</div>
                     </CardContent>
                   </Card>
                 ))}
               </div>
 
               {/* Problem, Solution, Impact */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-10 md:mb-12">
                 <Card className="shadow-lg animate-fade-in">
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-primary mb-4">
+                  <CardContent className="p-5 md:p-6">
+                    <h3 className="text-lg md:text-xl font-bold text-primary mb-3 md:mb-4">
                       Problem Statement
                     </h3>
-                    <p className="text-gray-700 leading-relaxed">{study.problem}</p>
+                    <p className="text-sm md:text-base text-gray-700 leading-relaxed">{study.problem}</p>
                   </CardContent>
                 </Card>
 
                 <Card className="shadow-lg animate-fade-in" style={{ animationDelay: "0.1s" }}>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-primary mb-4">
+                  <CardContent className="p-5 md:p-6">
+                    <h3 className="text-lg md:text-xl font-bold text-primary mb-3 md:mb-4">
                       Solution Provided
                     </h3>
-                    <p className="text-gray-700 leading-relaxed">{study.solution}</p>
+                    <p className="text-sm md:text-base text-gray-700 leading-relaxed">{study.solution}</p>
                   </CardContent>
                 </Card>
 
                 <Card className="shadow-lg animate-fade-in" style={{ animationDelay: "0.2s" }}>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-primary mb-4">
+                  <CardContent className="p-5 md:p-6">
+                    <h3 className="text-lg md:text-xl font-bold text-primary mb-3 md:mb-4">
                       Impact & Results
                     </h3>
                     <ul className="space-y-2">
                       {study.impact.map((item, idx) => (
                         <li key={idx} className="flex items-start space-x-2">
                           <CheckCircle2
-                            size={16}
+                            size={14}
                             className="text-secondary flex-shrink-0 mt-1"
                           />
-                          <span className="text-sm text-gray-700">{item}</span>
+                          <span className="text-xs md:text-sm text-gray-700">{item}</span>
                         </li>
                       ))}
                     </ul>
@@ -247,17 +247,17 @@ const CaseStudies = () => {
 
               {/* Technology Stack */}
               <Card className="shadow-lg animate-fade-in" style={{ animationDelay: "0.3s" }}>
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-bold text-primary mb-6">
+                <CardContent className="p-6 md:p-8">
+                  <h3 className="text-lg md:text-xl font-bold text-primary mb-4 md:mb-6">
                     Technology Stack
                   </h3>
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
                     {study.technologies.map((tech, idx) => (
                       <div
                         key={idx}
-                        className="flex items-center space-x-2 text-sm text-gray-700"
+                        className="flex items-center space-x-2 text-xs md:text-sm text-gray-700"
                       >
-                        <div className="w-2 h-2 rounded-full bg-secondary"></div>
+                        <div className="w-2 h-2 rounded-full bg-secondary flex-shrink-0"></div>
                         <span>{tech}</span>
                       </div>
                     ))}
@@ -270,19 +270,19 @@ const CaseStudies = () => {
       ))}
 
       {/* CTA Section */}
-      <section className="section-padding hero-gradient text-white relative overflow-hidden">
+      <section className="py-16 md:py-20 hero-gradient text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-white rounded-full blur-3xl"></div>
         </div>
-        <div className="container-custom text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+        <div className="container-custom text-center relative z-10 px-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">
             Ready to Transform Your Operations?
           </h2>
-          <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl mb-6 md:mb-8 text-white/90 max-w-2xl mx-auto">
             Let's discuss how we can help you achieve similar results
           </p>
           <a href="/contact">
-            <button className="bg-white text-primary hover:bg-white/90 px-8 py-4 rounded-lg font-semibold text-lg shadow-xl transition-all duration-300 hover:shadow-2xl">
+            <button className="bg-white text-primary hover:bg-white/90 px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold text-base md:text-lg shadow-xl transition-all duration-300 hover:shadow-2xl">
               Start Your Project
             </button>
           </a>
