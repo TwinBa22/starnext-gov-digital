@@ -4,6 +4,8 @@ import AbhishekWagh from "@/assets/team/Abhishek_Wagh.png";
 import RishikeshOza from "@/assets/team/Rishikesh_Oza.png";
 import PavanHasabnis from "@/assets/team/Pavan_Hasabnis.png";
 import TanmayHalaye from "@/assets/team/Tanmay_Halaye.png";
+import ChinranjanDas from "@/assets/team/Chintranjan_Das.png";
+import KrishnanRamesh from "@/assets/team/Krishnan_Ramesh.png";
 
 const About = () => {
   const leadership = [
@@ -38,11 +40,13 @@ const About = () => {
       name: "Chintranjan Das",
       role: "Strategic Advisor, Procurement & Vendor Management",
       description: "Advises on procurement frameworks, vendor negotiations, and cost optimization strategies. Ensures compliant, transparent, and efficient procurement operations.",
+      image: ChinranjanDas,
     },
     {
       name: "Krishnan Ramesh",
       role: "Technical Advisor, Finance & Planning",
       description: "Guides financial planning, budgeting, and cost control across technical projects. Ensures financial sustainability and investment alignment with organizational goals.",
+      image: KrishnanRamesh,
     },
   ];
 
@@ -308,8 +312,12 @@ const About = () => {
             {advisors.map((advisor, index) => (
               <Card key={index} className="text-center shadow-lg card-hover animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
                 <CardContent className="p-6">
-                  <div className="w-32 h-32 rounded-full bg-gradient-to-br from-secondary/10 to-primary/10 flex items-center justify-center mx-auto mb-4 border-4 border-primary/20">
-                    <User className="text-secondary" size={48} />
+                  <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-4 border-primary/20">
+                    <img 
+                      src={advisor.image} 
+                      alt={advisor.name}
+                      className="w-full h-full object-cover object-top"
+                    />
                   </div>
                   <h3 className="text-xl font-bold text-primary mb-2">
                     {advisor.name}
