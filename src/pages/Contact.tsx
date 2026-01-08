@@ -224,13 +224,31 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="text-base md:text-lg font-semibold text-primary mb-2">
-                        Office Address
+                        Pune Office
                       </h3>
                       <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-                        StarNext Innovations Pvt. Ltd.<br />
-                        501, 5th Floor, XYZ Tech Park<br />
-                        Senapati Bapat Road<br />
-                        Pune – 411016, Maharashtra, India
+                        Fortune Plaza, 3rd Floor, Office No. 304,<br />
+                        Bavdhan, Pune 411021
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="shadow-lg card-hover">
+                <CardContent className="p-5 md:p-6">
+                  <div className="flex items-start space-x-3 md:space-x-4">
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg hero-gradient flex items-center justify-center flex-shrink-0">
+                      <MapPin className="text-white" size={20} />
+                    </div>
+                    <div>
+                      <h3 className="text-base md:text-lg font-semibold text-primary mb-2">
+                        Mumbai Office
+                      </h3>
+                      <p className="text-sm md:text-base text-gray-600 leading-relaxed">
+                        Office No 2603, 26th Floor, G Square Business Park,<br />
+                        Plot No 25 & 26, Sector 30, Vashi,<br />
+                        Navi Mumbai 400705
                       </p>
                     </div>
                   </div>
