@@ -2,6 +2,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Award, Users, TrendingUp, MapPin, Target, Eye, User } from "lucide-react";
 import AbhishekWagh from "@/assets/team/Abhishek_Wagh.png";
 import RishikeshOza from "@/assets/team/Rishikesh_Oza.png";
+import PavanHasabnis from "@/assets/team/Pavan_Hasabnis.png";
+import TanmayHalaye from "@/assets/team/Tanmay_Halaye.png";
 
 const About = () => {
   const leadership = [
@@ -21,13 +23,13 @@ const About = () => {
       name: "Pavan Hasabnis",
       role: "Director, Cloud Engineering & Infrastructure",
       description: "Oversees cloud architecture, infrastructure modernization, and large-scale system deployments. Ensures security, scalability, and high availability across all cloud environments.",
-      image: null,
+      image: PavanHasabnis,
     },
     {
       name: "Tanmay Halaye",
       role: "Director, Technology & Client Success",
       description: "Overseeing technical innovation and implementation, while managing client relations and business development. Ensures delivery excellence across solutions and projects.",
-      image: null,
+      image: TanmayHalaye,
     },
   ];
 
