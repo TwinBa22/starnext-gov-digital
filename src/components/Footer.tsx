@@ -58,12 +58,26 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <div className="space-y-3">
+              <div className="flex items-start space-x-3 mb-3">
+                <MapPin size={18} className="mt-1 flex-shrink-0 text-secondary" />
+                <div>
+                  <p className="text-sm font-medium text-white/90 mb-1">Pune</p>
+                  <p className="text-sm text-white/70">
+                    Fortune Plaza, 3rd Floor, Office No. 304,<br />
+                    Bavdhan, Pune 411021
+                  </p>
+                </div>
+              </div>
               <div className="flex items-start space-x-3">
                 <MapPin size={18} className="mt-1 flex-shrink-0 text-secondary" />
-                <p className="text-sm text-white/70">
-                  501, 5th Floor, XYZ Tech Park,<br />
-                  Senapati Bapat Road, Pune – 411016
-                </p>
+                <div>
+                  <p className="text-sm font-medium text-white/90 mb-1">Mumbai</p>
+                  <p className="text-sm text-white/70">
+                    Office No 2603, 26th Floor, G Square Business Park,<br />
+                    Plot No 25 & 26, Sector 30, Vashi,<br />
+                    Navi Mumbai 400705
+                  </p>
+                </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone size={18} className="flex-shrink-0 text-secondary" />
