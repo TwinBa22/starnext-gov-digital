@@ -1,5 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Award, Users, TrendingUp, MapPin, Target, Eye, User } from "lucide-react";
+import AbhishekWagh from "@/assets/team/Abhishek_Wagh.png";
+import RishikeshOza from "@/assets/team/Rishikesh_Oza.png";
 
 const About = () => {
   const leadership = [
@@ -7,21 +9,25 @@ const About = () => {
       name: "Abhishek Wagh",
       role: "Director, Strategy & Government Affairs",
       description: "Leading strategic initiatives and government partnerships.",
+      image: AbhishekWagh,
     },
     {
       name: "Rishikesh Oza",
       role: "Director, Strategy & Operations",
       description: "Driving operational excellence and project delivery.",
+      image: RishikeshOza,
     },
     {
       name: "Pavan Hasabnis",
       role: "Director, Cloud Engineering & Infrastructure",
       description: "Oversees cloud architecture, infrastructure modernization, and large-scale system deployments. Ensures security, scalability, and high availability across all cloud environments.",
+      image: null,
     },
     {
       name: "Tanmay Halaye",
       role: "Director, Technology & Client Success",
       description: "Overseeing technical innovation and implementation, while managing client relations and business development. Ensures delivery excellence across solutions and projects.",
+      image: null,
     },
   ];
 
@@ -264,9 +270,19 @@ const About = () => {
             {leadership.map((leader, index) => (
               <Card key={index} className="text-center shadow-lg card-hover animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
                 <CardContent className="p-6">
-                  <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center mx-auto mb-4 border-4 border-secondary/20">
-                    <User className="text-primary" size={48} />
-                  </div>
+                  {leader.image ? (
+                    <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-4 border-secondary/20">
+                      <img 
+                        src={leader.image} 
+                        alt={leader.name}
+                        className="w-full h-full object-cover object-top"
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center mx-auto mb-4 border-4 border-secondary/20">
+                      <User className="text-primary" size={48} />
+                    </div>
+                  )}
                   <h3 className="text-xl font-bold text-primary mb-2">
                     {leader.name}
                   </h3>
